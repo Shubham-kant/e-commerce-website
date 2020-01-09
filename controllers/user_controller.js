@@ -2,6 +2,10 @@ const User=require('../models/user');
 
 //go to sign up page
 module.exports.signUp=function(req,res){
+    //if he is already logged in he cant signup.
+    if(req.isAuthenticated()){
+        return res.redirect('/users/profile');
+    }
     return res.render('user_sign_up');
 }
 //creating a user
@@ -31,6 +35,10 @@ module.exports.create=function(req,res){
 }
 //go to sign in page
 module.exports.signIn=function(req,res){
+    //if he is already logged in he cant sign in.
+    if(req.isAuthenticated()){
+        return res.redirect('/users/profile');
+    }
     return res.render('user_sign_in');
 }
 module.exports.createSession=function(req,res){
@@ -39,4 +47,7 @@ module.exports.createSession=function(req,res){
 
 
 
+}
+module.exports.profile=function(req,res){
+    return res.render('user_profile');
 }
