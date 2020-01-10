@@ -45,8 +45,6 @@ module.exports.createSession=function(req,res){
     return res.redirect('/');
 
 
-
-
 }
 module.exports.profile=function(req,res){
     return res.render('user_profile');
