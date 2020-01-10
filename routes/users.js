@@ -13,6 +13,7 @@ router.post('/create-session',passport.authenticate(
     ),userController.createSession);
 
 router.get('/profile',passport.checkAuthentication,userController.profile);
+router.get('/sign-out',userController.destroySession);
 
 
 

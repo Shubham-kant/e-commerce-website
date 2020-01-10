@@ -1,4 +1,31 @@
 <section id="header-section">
+    <div id="app-name">
+        e commerce
+    </div>
+    <div id="sign-links">
+        <% if(locals.user){ %>
+            <a href="/users/profile">
+                <%= user.name %>
+            </a>
+            <a href="/">
+                Home
+             </a>
+            <a href="/users/sign-out">
+                sign out
+            </a>
+
+
+        <% }else{ %>
+            <a href="/users/sign-up">
+                Sign up
+            </a>
+            <a href="/users/sign-in">
+                Sign in
+            </a>
+
+        <% } %>
+
+    </div>
     
 
 </section>

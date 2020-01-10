@@ -46,6 +46,16 @@ module.exports.createSession=function(req,res){
 
 
 }
+//profile section
 module.exports.profile=function(req,res){
     return res.render('user_profile');
+}
+//sign out
+module.exports.destroySession=function(req,res){
+    //logout() function is given by passport
+    req.logout();
+    //return to homepage
+    return res.redirect('/');
+
+
 }
