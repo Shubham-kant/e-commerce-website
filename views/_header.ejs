@@ -1,27 +1,40 @@
 <section id="header-section">
     <div id="app-name">
-        e commerce
+        <a href="/"><h2>Home</h2></a>
+        
     </div>
+    <div id="search-bar">
+        <form>
+            <input type="name" name="productname" placeholder="search for products">
+            
+        </form>
+
+
+    </div>
+    
+
     <div id="sign-links">
         <% if(locals.user){ %>
-            <a href="/users/profile">
-                <%= user.name %>
-            </a>
-            <a href="/">
-                Home
-             </a>
-            <a href="/users/sign-out">
-                sign out
-            </a>
-
-
+            <div id="cart-section">
+                <a href=""><button ><i class="fas fa-shopping-cart"></i>Cart</button></a>
+            </div>
+            <div id="user-profile-btn">
+                <a href="/users/profile"><button><%= user.name %></button></a>
+            </div>
+            <div id="sign-out-btn">
+                <a href="/users/sign-out"><button>signout</button></a>
+            </div>
+            
         <% }else{ %>
-            <a href="/users/sign-up">
-                Sign up
-            </a>
-            <a href="/users/sign-in">
-                Sign in
-            </a>
+            <div id="cart-section">
+                <a href="/users/sign-in"><button ><i class="fas fa-shopping-cart"></i>Cart</button></a>
+            </div>
+            <div id="sign-up-btn">
+                <a href="/users/sign-up"> <button>Sign up</button> </a>
+            </div>
+            <div id="sign-in-btn">
+                <a href="/users/sign-in"><button>Sign in</button></a>
+            </div>
 
         <% } %>
 

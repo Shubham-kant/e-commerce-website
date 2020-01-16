@@ -1,4 +1,10 @@
 <link rel="stylesheet" href="/css/home.css">
-<h1>
-    amazon
-</h1>
+<% for(var i of products){  %>
+    <%= i.name %>
+    <%= i.price %>
+    <%= i.description %>
+    <%= i.type %>
+    <%= i.subtype %>
+    <%= i.manufacturer %>
+    <%= i.stock %>
+<% } %>
