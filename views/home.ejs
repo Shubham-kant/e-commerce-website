@@ -1,11 +1,20 @@
 <link rel="stylesheet" href="/css/home.css">
-<% for(var i of products){  %>
-    <img src="<%= i.avatar %>" alt="<%= i.name %>" width="100" height="100">
-    <%= i.name %>
-    <%= i.price %>
-    <!-- <%= i.description %> -->
-    <!-- <%= i.type %> -->
-    <!-- <%= i.subtype %> -->
-    <!-- <%= i.manufacturer %> -->
-    <!-- <%= i.stock %> -->
-<% } %>
+<section id="home-page-container">
+    <div id="product-container">
+        <% for(var i of products){  %>
+            <div id="product-box">
+                <img src="<%= i.avatar %>" alt="<%= i.name %>" width="150" height="200">
+                
+                <span><%= i.name %></span>
+                <span><%= i.price %></span>
+                <span><a href=""><i class="fas fa-shopping-cart"></i></a></span>
+    
+                <!-- <%= i.description %> -->
+                <!-- <%= i.type %> -->
+                <!-- <%= i.subtype %> -->
+                <!-- <%= i.manufacturer %> -->
+                <!-- <%= i.stock %> -->
+            </div>
+        <% } %>
+    </div>
+</section>

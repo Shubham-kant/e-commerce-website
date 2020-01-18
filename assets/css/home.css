@@ -1,2 +1,17 @@
-h1 {
-  color: blue; }
+body #home-page-container {
+  margin-left: 5rem;
+  margin-right: 5rem; }
+  body #home-page-container #product-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    body #home-page-container #product-container #product-box {
+      height: 280px;
+      width: 200px;
+      border: 1px solid black;
+      display: inline-block; }
+      body #home-page-container #product-container #product-box img {
+        display: inline-block; }
+      body #home-page-container #product-container #product-box span {
+        display: inline-block;
+        margin: auto; }
