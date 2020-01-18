@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/css/vendor-product-add.css">
 <section id="product-add">
     <h1>Add Product</h1>
-    <form action="/vendor/product-insertion-page/create" method="POST">
+    <form action="/vendor/product-insertion-page/create" enctype="multipart/form-data" method="POST">
         product-id:<input type="number" name="productid" required>
         name:<input type="text" name="name" required>
         price:<input type="number" name="price" required>
@@ -10,6 +10,7 @@
         description:<input type="text" name="description" required>
         manufacturer:<input type="text" name="manufacturer" required>
         stock:<input type="number" name="stock" required>
+        avatar:<input type="file" name="avatar">
         <input type="submit" value="Add">
     </form>
 
