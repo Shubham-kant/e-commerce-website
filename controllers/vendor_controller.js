@@ -25,8 +25,8 @@ module.exports.avatarUpload=function(req,res,product){
 */
 
 module.exports.create=function(req,res){
-    console.log(req.body);
-    console.log(req.file);
+    //console.log(req.body);
+    //console.log(req.file);
     Product.create({
         product_id:req.body.productid,
         name:req.body.name,

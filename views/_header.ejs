@@ -15,8 +15,9 @@
 
     <div id="sign-links">
         <% if(locals.user){ %>
+             
             <div id="cart-section">
-                <a href=""><button ><i class="fas fa-shopping-cart"></i>Cart</button></a>
+                <a href="/users/cartpage/<%= locals.user.id %>"><button ><i class="fas fa-shopping-cart"></i>Cart</button></a>
             </div>
             <div id="user-profile-btn">
                 <a href="/users/profile"><button><%= user.name %></button></a>

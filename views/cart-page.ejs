@@ -1,0 +1,13 @@
+<h1><%= user.name  %> cart</h1>
+
+<div>
+<% for(var i of user.productcart){ %>
+    <%= i.productname %>
+    <%= i.quantity %>
+    <%= i.productavatar %>
+    <%= i.productprice %>
+<% } %>
+</div>
+
+ 
+

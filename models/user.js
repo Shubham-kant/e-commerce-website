@@ -12,7 +12,16 @@ const userSchema=new mongoose.Schema({
     name:{
         type:String,
         required:true
-    }
+    },
+    
+    productcart:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'Cart'
+        }
+    ]
+    
+    
 },{
     timestamps:true
 });
