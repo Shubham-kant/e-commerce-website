@@ -16,7 +16,7 @@ router.post('/create-session',passport.authenticate(
 router.get('/profile',passport.checkAuthentication,userController.profile);
 router.get('/sign-out',userController.destroySession);
 router.get('/cart/:id',passport.checkAuthentication,cartController.addProductsInCart);
-router.get('/cartpage/:id',passport.checkAuthentication,cartController.cartPage);
+//router.get('/cartpage/:id',passport.checkAuthentication,cartController.cartPage);
 
 
 console.log('user router is working fine');

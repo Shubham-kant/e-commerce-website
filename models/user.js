@@ -13,14 +13,14 @@ const userSchema=new mongoose.Schema({
         type:String,
         required:true
     },
-    
+    /*
     productcart:[
         {
             type:mongoose.Schema.Types.ObjectId,
             ref:'Cart'
         }
     ]
-    
+    */
     
 },{
     timestamps:true
