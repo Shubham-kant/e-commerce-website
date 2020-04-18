@@ -56,6 +56,7 @@ passport.setAuthenticatedUser=function(req,res,next){
         this to the locals for the views*/
         res.locals.user=req.user;
         res.locals.session=req.session;
+        res.locals.isCart=false;
         //console.log('req',req);
     }
     next();

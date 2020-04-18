@@ -1,13 +1,16 @@
-<h1><%= user.name  %> cart</h1>
-
-<div>
-<% for(var i of user.productcart){ %>
-    <%= i.productname %>
-    <%= i.quantity %>
-    <%= i.productavatar %>
-    <%= i.productprice %>
+<% if(products!=null){ %>
+<div><h1>your cart</h1>
+<% for(var i of products){ %>
+    <div>
+    <%= i.item.name %>
+    <img src="<%= i.item.avatar %>" alt="<%= i.name %>" width="150" height="200">
+    <%= i.price %>
+    <%= i.qty %>   
+    </div>
 <% } %>
 </div>
-
- 
-
+<div><h1>total price:<%= totalPrice %></h1></div>
+<div><h1>total quantity :<%= totalQty %></h1></div>
+<% }else{ %>
+    <h1>no items in cart</h1>
+<% } %>
