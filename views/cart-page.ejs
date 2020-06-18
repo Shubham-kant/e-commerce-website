@@ -3,14 +3,16 @@
 <% for(var i of products){ %>
     <div>
     <%= i.item.name %>
-    <img src="<%= i.item.avatar %>" alt="<%= i.name %>" width="150" height="200">
+    <img src="<%= i.item.avatar %>" alt="<%= i.name %>" width="50" height="50">
     <%= i.price %>
     <%= i.qty %>   
+    
     </div>
 <% } %>
 </div>
 <div><h1>total price:<%= totalPrice %></h1></div>
 <div><h1>total quantity :<%= totalQty %></h1></div>
+<a href="/users/cartpage/<%= locals.user.id %>/checkout"><button type="submit">checkout </button></a>
 <% }else{ %>
     <h1>no items in cart</h1>
 <% } %>

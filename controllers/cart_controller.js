@@ -39,3 +39,14 @@ module.exports.cartPage=function(req,res){
         totalQty:cart.totalQty
     })
 }
+module.exports.checkout=function(req,res){
+    if(!req.session.cart){
+        return res.redirect(back);
+    }
+    var cart=new Cart(req.session.cart);
+    return res.render('checkout',{
+        totalPrice:cart.totalPrice
+    })
+
+
+}
