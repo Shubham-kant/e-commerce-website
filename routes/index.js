@@ -6,9 +6,5 @@ router.get('/',homeController.home);
 router.use('/users',require('./users'));
 router.use('/vendor',require('./vendor'));
 
-
-
-
-
 console.log('router is working fine');
 module.exports=router;

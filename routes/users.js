@@ -16,6 +16,8 @@ router.post('/create-session',passport.authenticate(
 router.get('/profile',passport.checkAuthentication,userController.profile);
 router.get('/sign-out',userController.destroySession);
 router.get('/cart/:id',passport.checkAuthentication,cartController.addProductsInCart);
+router.get('/cart/product/:id',passport.checkAuthentication,cartController.decrementQuantity);
+router.get('/cart/removeproduct/:id',passport.checkAuthentication,cartController.removeProduct);
 router.get('/cartpage/:id',passport.checkAuthentication,cartController.cartPage);
 router.get('/cartpage/:id/checkout',passport.checkAuthentication,cartController.checkout);
 

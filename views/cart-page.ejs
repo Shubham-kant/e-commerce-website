@@ -1,18 +1,37 @@
-<% if(products!=null){ %>
-<div><h1>your cart</h1>
+<% if(products.length>0 ){ %>
+<div>
+    <h1>your cart</h1>
 <% for(var i of products){ %>
+    <% if(i.item){ %>
+
+    
     <div>
     <%= i.item.name %>
     <img src="<%= i.item.avatar %>" alt="<%= i.name %>" width="50" height="50">
     <%= i.price %>
-    <%= i.qty %>   
+    <span id="minus-symbol"><a href="/users/cart/product/<%= i.item._id %>">
+        <button><i class="fas fa-minus-circle"></i></button>
+    </a>
+    </span>
+    <%= i.qty %>
     
+    <span id="plus-symbol">
+        <a href="/users/cart/<%= i.item._id %>">
+            <button><i class="fas fa-plus-circle"></i></button>
+        </a>
+    </span>
+
+    <button>
+        <a href="/users/cart/removeproduct/<%= i.item._id %>">REMOVE</a>
+    </button>
     </div>
+<% } %>
 <% } %>
 </div>
 <div><h1>total price:<%= totalPrice %></h1></div>
-<div><h1>total quantity :<%= totalQty %></h1></div>
+<div><h1>total quantity:<%= totalQty %></h1></div>
 <a href="/users/cartpage/<%= locals.user.id %>/checkout"><button type="submit">checkout </button></a>
 <% }else{ %>
     <h1>no items in cart</h1>
 <% } %>
+<script src="/js/home_cart_symbol.js"></script>
