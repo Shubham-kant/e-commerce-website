@@ -42,6 +42,28 @@ module.exports.signIn=function(req,res){
     return res.render('user_sign_in');
 }
 module.exports.createSession=function(req,res){
+    //remove 1 45 to 66
+    // try{
+    //     let user=await User.findOne({email:req.body.email});
+    //     if(!user || user.password!=req.body.password){
+    //         return res.json(422,{
+    //             message:'invalid username|password'
+    //         });
+    //     } 
+    //     //if user found  
+    //     return res.json(200,{
+    //         message:'Sign In successful ,here is your token please keep it safe!',
+    //         data:{
+    //             token:jwt.sign(user.toJSON(),'yourkart',{expiresIn:'100000'})
+    //         }
+    //     });
+    // }
+    // catch(error){
+    //     console.log('********error',err);
+    //     return res.json(500,{
+    //         message:'Internal server Error'
+    //     });
+    // }
     return res.redirect('/');
 
 

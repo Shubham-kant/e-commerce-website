@@ -56,6 +56,20 @@ module.exports=function Cart(oldCart){
         this.totalQty-=1;
         this.totalPrice-=storedItem.item.price;
     }
+    //empty a cart after buying
+    this.emptyCart=function(){
+        console.log('empty the cart now!!');
+        this.items={};
+        this.totalPrice=0;
+        this.totalQty=0;
+        oldCart.items={};
+        oldCart.totalPrice=0;
+        oldCart.totalQty=0;
+        for(var id in this.items){
+            this.items[id]={};
+            
+        }
+    }
     this.remove=function(item,id){
 
         var storedItem=this.items[id];

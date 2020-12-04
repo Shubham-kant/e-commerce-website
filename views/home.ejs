@@ -3,7 +3,10 @@
     <div id="product-container">
         <% for(var i of products){  %>
             <div id="product-box">
-                <img src="<%= i.avatar %>" alt="<%= i.name %>" width="150" height="200">
+                <a href="/products/<%= i._id %>">
+                    <img src="<%= i.avatar %>" alt="<%= i.name %>" width="150" height="200">
+                </a>
+                
                 
                 <span><%= i.name %></span>
                 <span><%= i.price %></span>

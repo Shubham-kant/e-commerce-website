@@ -2,7 +2,7 @@
 const Cart=require('../models/cart');
 const User=require('../models/user');
 const Product=require('../models/product');
-const cart = require('../models/cart');
+// const cart = require('../models/cart');
 
 
 module.exports.addProductsInCart=function(req,res){
