@@ -1,11 +1,11 @@
-<% if(products.length>0 ){ %>
+<% if(products!=null && products.length>0 ){ %>
 <div>
     <h1>your cart</h1>
 <% for(var i of products){ %>
     <% if(i.item){ %>
 
     
-    <div>
+    <div id="cart-item">
     <%= i.item.name %>
     <img src="<%= i.item.avatar %>" alt="<%= i.name %>" width="50" height="50">
     <%= i.price %>
