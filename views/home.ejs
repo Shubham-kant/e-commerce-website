@@ -13,13 +13,13 @@
                 <% if(locals.user){ %>
                     <span id="cart-symbol"><a href="/users/cart/<%= i._id %>">
                     
-                        <button><i class="fas fa-shopping-cart"></i></button>
+                        <button>Add to Cart<i class="fas fa-shopping-cart"></i></button>
                         
                     </a>
                     </span>
                 <% }else{ %>
                     <span id="cart-symbol"><a href="/users/sign-in">
-                        <button><i class="fas fa-shopping-cart"></i></button>
+                        <button>Add to Cart<i class="fas fa-shopping-cart"></i></button>
                     </a></span>
                 <% } %>
                 <!-- <%= i.description %> -->

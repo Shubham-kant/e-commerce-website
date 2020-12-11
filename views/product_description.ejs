@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/css/product-description.css">
 <h1><%= product.name %></h1>
 
 <img src="<%= product.avatar %>" alt="<%= product.name %>" width="150" height="200">
@@ -6,7 +7,7 @@
 <% if(locals.user){ %>
     <span id="cart-symbol"><a href="/users/cart/<%= product._id %>">
     
-        <button><i class="fas fa-shopping-cart"></i></button>
+        <button>Add to Cart<i class="fas fa-shopping-cart"></i></button>
         
     </a>
     </span>
