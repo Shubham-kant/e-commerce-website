@@ -49,7 +49,7 @@ app.use(session({
             mongooseConnection:db,
             autoRemove:'disabled'
         },function(err){
-            console.log(err||'connect-mongo set-up ok');
+            console.log(err || 'connect-mongo set-up ok');
         }
     )
 }));
