@@ -36,8 +36,8 @@ app.set('view engine','ejs');
 app.set('views','./views');
 
 app.use(session({
-    name:process.env.NAME || 'yourkart',
-    secret:process.env.SECRET || 'blahsomething',
+    name:'yourkart',
+    secret:'blahsomething',
     saveUninitialized:false,
     resave:false,
     cookie:{
