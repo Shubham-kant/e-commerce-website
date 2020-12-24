@@ -37,7 +37,7 @@ app.set('views','./views');
 
 app.use(session({
     name:'yourkart',
-    secret:'blahsomething',
+    secret: 'blahsomething',
     saveUninitialized:false,
     resave:false,
     cookie:{
