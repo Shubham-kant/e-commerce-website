@@ -6,6 +6,7 @@ module.exports.home=function(req,res){
             console.log('error in finding the products');
             return;
         }
+        console.log('home page');
         return res.render('home',{
             products:products
         });
