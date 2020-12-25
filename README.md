@@ -6,7 +6,7 @@ In this website,users can login with their accounts,explore all the wonderful pr
 ## Screenshots
 
 ![Sign Up Page](uploads/yourkart_screenshots/sign_up.PNG "Sign Up Page")
-![Home Page](ueploads/yourkart_screenshots/home_page.PNG "Home Page")
+![Home Page](uploads/yourkart_screenshots/home_page.PNG "Home Page")
 ![Cart Page](uploads/yourkart_screenshots/cart_page.PNG "Cart Page")
 
 ## Technologies Stack:
