@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 // mongoose.connect(process.env.MONGO_URL || 'mongodb://localhost/e-commerce_development');
 mongoose
-    .connect(process.env.MONGO_URL || 'mongodb://localhost/e-commerce_development',{
+    .connect(process.env.MONGO_URL,{
         useUnifiedTopology:true,
         useNewUrlParser:true,
         useCreateIndex:true,
