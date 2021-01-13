@@ -20,6 +20,27 @@ body{
 
 
         }
+    }
+        a{
+            input[type="submit"]{
+                display: inline-block;
+              
+                // border-radius:3%;
+                width: 20vw;
+                padding: 0.3rem;
+                font-size: 0.7rem;
+                // outline: blueviolet;
+                font-family: sans-serif;
+                
+                
+            background-color: palevioletred;
+            color:white;
+            font-size:1rem;
+            outline: none;
+            cursor: pointer;
+            border:none;
+            }
+        
 
     }
 

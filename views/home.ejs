@@ -8,8 +8,8 @@
                 </a>
                 
                 
-                <span><%= i.name %></span>
-                <span><%= i.price %></span>
+                <span><%= i.name %></span><br>
+                <span>Rs <%= i.price %></span>
                 <% if(locals.user){ %>
                     <span id="cart-symbol"><a href="/users/cart/<%= i._id %>">
                     

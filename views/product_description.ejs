@@ -3,7 +3,7 @@
 
 <img src="<%= product.avatar %>" alt="<%= product.name %>" width="150" height="200">
 <h1><%= product.description %></h1>
-<h1><%= product.price %></h1>
+<h1>Rs <%= product.price %></h1>
 <% if(locals.user){ %>
     <span id="cart-symbol"><a href="/users/cart/<%= product._id %>">
     

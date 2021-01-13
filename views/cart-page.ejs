@@ -38,7 +38,7 @@
 
 <div><h1>Total quantity:<%= totalQty %></h1></div>
 <div><h1>Total price:<%= totalPrice %></h1></div>
-<a href="/users/cartpage/<%= locals.user.id %>/checkout"><button type="submit">checkout </button></a>
+<a href="/users/cartpage/<%= locals.user.id %>/checkout"><input type="submit" value="Checkout"></a>
 <% }else{ %>
     <h1>Your Basket is empty.</h1>
 <% } %>

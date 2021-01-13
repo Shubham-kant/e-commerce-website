@@ -2,7 +2,7 @@ body{
     h1{
 
     }
-    #product-add{
+    #checkout-page{
         div{
             display:flex;
             flex-direction: space-between;
@@ -25,14 +25,14 @@ body{
         }
         input[type="submit"]{
             display: inline-block;
-              
+              margin-top:1rem;
                 // border-radius:3%;
                 width: 20vw;
                 padding: 0.3rem;
                 font-size: 0.7rem;
                 // outline: blueviolet;
                 font-family: sans-serif;
-               
+                
                 
             background-color: palevioletred;
             color:white;
