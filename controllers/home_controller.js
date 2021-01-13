@@ -31,8 +31,4 @@ module.exports.productDescription=function(req,res){
             return;
         }
     });
-
-
-
-
 }
