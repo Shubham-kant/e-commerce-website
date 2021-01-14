@@ -78,7 +78,7 @@ module.exports=function Cart(oldCart){
         }
         //storedItem.price=storedItem.item.price*storedItem.qty;
         this.totalQty-=storedItem.qty;
-        this.totalPrice-=storedItem.item.price;
+        this.totalPrice-=storedItem.qty*storedItem.item.price;
         storedItem.qty=0;
         storedItem.price=0;
         storedItem.item={};
