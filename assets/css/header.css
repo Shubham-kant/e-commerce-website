@@ -13,7 +13,7 @@ body #header-section {
   align-items: center;
   box-sizing: border-box;
   background-color: #2874F0;
-  padding: 2px 6px; }
+  padding: 8px 6px; }
   body #header-section .app-name a {
     text-decoration: none;
     font-family: sans-serif;
@@ -25,14 +25,14 @@ body #header-section {
       color: white; }
   body #header-section .search-bar input {
     padding: 8px 24px;
-    min-width: 300px;
-    width: 300px;
+    min-width: 350px;
+    width: 350px;
     outline: none;
     border: none; }
   body #header-section #sign-links {
-    display: flex; }
+    display: flex;
+    align-items: center; }
     body #header-section #sign-links button {
-      margin-top: 0.5rem;
       width: 4rem;
       padding: 0.2rem;
       font-size: 0.7rem;
@@ -48,10 +48,11 @@ body #header-section {
       color: white; }
       body #header-section #sign-links .cart-section button i {
         margin-right: 4px; }
-    body #header-section #sign-links #user-profile-btn button {
-      background-color: transparent;
-      margin-left: 10px;
-      border: none; }
+    body #header-section #sign-links .user-profile-btn a {
+      text-decoration: none; }
+      body #header-section #sign-links .user-profile-btn a span {
+        margin-left: 10px;
+        color: white; }
     body #header-section #sign-links #sign-out-btn button {
       background: transparent;
       margin-left: 10px;

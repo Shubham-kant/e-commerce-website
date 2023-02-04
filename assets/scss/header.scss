@@ -8,21 +8,17 @@ body{
     a{
         cursor: pointer;
     }
-    #header-section{
+    .header-section{
         display:flex;
         justify-content: space-between;
         align-items: center;
         box-sizing: border-box;
         background-color: #2874F0;
-        padding: 2px 6px;
+        padding: 8px 6px;
         .app-name{
             a{
                 text-decoration: none;
-                //color: black;
-                // font-family:
                 font-family: sans-serif;
-                //background-color: palevioletred;
-                // color:white;
                 font-size:1rem;
                 outline: none;
                 cursor: pointer;
@@ -35,39 +31,29 @@ body{
         .search-bar {
             input {
                 padding: 8px 24px;
-                min-width: 300px;
-                width: 300px;
+                min-width: 350px;
+                width: 350px;
                 outline: none;
                 border: none;
             }
-
         }
-        
-        #sign-links{
+        .sign-links {
             display: flex;
-            button{
-                    margin-top: 0.5rem;
-                    // border-radius:3%;
-                    width: 4rem;
-                    padding: 0.2rem;
-                    font-size: 0.7rem;
-                    // outline: blueviolet;
-                    font-family: sans-serif;
-                   // outline-color:black;
-                    
-                    color:white;
-                    font-size:1rem;
-                    outline: none;
-                    cursor: pointer;
-                    //border:none;
-                    border-radius:3%;
-
+            align-items: center;
+            button {
+                width: 4rem;
+                padding: 0.2rem;
+                font-size: 0.7rem;
+                font-family: sans-serif;
+                color:white;
+                font-size:1rem;
+                outline: none;
+                cursor: pointer;
+                border-radius:3%;
             }
-            
-            .cart-section{
-                button{
+            .cart-section {
+                button {
                    border:none;
-                //    margin-left: 10px;
                     background-color:transparent;
                     color:white;
                     i {
@@ -75,54 +61,36 @@ body{
                     }
                 }
             }
-            #user-profile-btn{
-                button{
-                    //border: 2px solid palevioletred;
-                    //border:1px solid transparent;
-                    background-color:transparent;
-                    margin-left:10px;
-                    border: none;
-                    //color:palevioletred
+            .user-profile-btn{
+                a {
+                    text-decoration: none;
+                    span {
+                        margin-left:10px;
+                        color: white;
+                    }
                 }
-
             }
-            #sign-out-btn{
+            .sign-out-btn{
                 button{
                     background:transparent;
-                    //border:1px solid transparent;
-                    //border: 2px solid palevioletred;
                     margin-left:10px;
                     border: none;
-                    
                 }
-
             }
-            #sign-up-btn{
+            .sign-up-btn{
                 button{
-                    //border: 2px solid palevioletred;
                     background-color:transparent;
                     border: none;
-                    //background-color: #ec5252;
-                    //border:1px solid transparent;
-                    margin-left:10px;
-                    //color:palevioletred
-                    
+                    margin-left:10px;  
                 }
-
             }
-            #sign-in-btn{
+            .sign-in-btn{
                 button{
                     background:transparent;
                     border: none;
-                    //border:1px solid transparent;
-                    //border: 2px solid palevioletred;
                     margin-left:10px;
-                    
                 }
-
             }
-
-
         }
     }
 }
