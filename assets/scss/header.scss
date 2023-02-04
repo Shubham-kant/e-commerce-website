@@ -1,28 +1,45 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
 body{
-    
     a{
         cursor: pointer;
     }
     #header-section{
         display:flex;
         justify-content: space-between;
+        align-items: center;
         box-sizing: border-box;
-
-        #app-name{
+        background-color: #2874F0;
+        padding: 2px 6px;
+        .app-name{
             a{
                 text-decoration: none;
-                color: black;
+                //color: black;
                 // font-family:
                 font-family: sans-serif;
-                background-color: palevioletred;
+                //background-color: palevioletred;
                 // color:white;
                 font-size:1rem;
                 outline: none;
                 cursor: pointer;
                 border:none;
+                .heading {
+                    color: white;
+                }
             }
         }
-        #search-bar{
+        .search-bar {
+            input {
+                padding: 8px 24px;
+                min-width: 300px;
+                width: 300px;
+                outline: none;
+                border: none;
+            }
 
         }
         
@@ -36,7 +53,7 @@ body{
                     font-size: 0.7rem;
                     // outline: blueviolet;
                     font-family: sans-serif;
-                    outline-color:black;
+                   // outline-color:black;
                     
                     color:white;
                     font-size:1rem;
@@ -47,54 +64,58 @@ body{
 
             }
             
-            #cart-section{
+            .cart-section{
                 button{
-                    border:1px solid black;
+                   border:none;
+                //    margin-left: 10px;
                     background-color:transparent;
-                    color:black;
-
-
-                    
-    
+                    color:white;
+                    i {
+                        margin-right: 4px;
+                    }
                 }
             }
             #user-profile-btn{
                 button{
-                    border: 2px solid palevioletred;
+                    //border: 2px solid palevioletred;
                     //border:1px solid transparent;
                     background-color:transparent;
                     margin-left:10px;
-                    color:palevioletred
+                    border: none;
+                    //color:palevioletred
                 }
 
             }
             #sign-out-btn{
                 button{
-                    background-color: palevioletred;
+                    background:transparent;
                     //border:1px solid transparent;
-                    border: 2px solid palevioletred;
+                    //border: 2px solid palevioletred;
                     margin-left:10px;
+                    border: none;
                     
                 }
 
             }
             #sign-up-btn{
                 button{
-                    border: 2px solid palevioletred;
+                    //border: 2px solid palevioletred;
                     background-color:transparent;
+                    border: none;
                     //background-color: #ec5252;
                     //border:1px solid transparent;
                     margin-left:10px;
-                    color:palevioletred
+                    //color:palevioletred
                     
                 }
 
             }
             #sign-in-btn{
                 button{
-                    background-color: palevioletred;
+                    background:transparent;
+                    border: none;
                     //border:1px solid transparent;
-                    border: 2px solid palevioletred;
+                    //border: 2px solid palevioletred;
                     margin-left:10px;
                     
                 }

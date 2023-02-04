@@ -45,6 +45,7 @@ module.exports.create=function(req,res){
             return;
         }
         //avatarUpload(product);
+        console.log('no error in creating new product');
         return res.redirect('/vendor/product-insertion-page');
     })
 

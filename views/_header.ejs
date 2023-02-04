@@ -1,22 +1,15 @@
 <section id="header-section">
-    <div id="app-name">
-        <a href="/"><h2>Home</h2></a>
-        
+    <div class="app-name">
+        <a href="/"><h2 class="heading">Yourkart</h2></a>
     </div>
-    <div id="search-bar">
-        <form>
+        <form class="search-bar">
             <input type="name" name="productname" placeholder="search for products">
             
         </form>
-
-
-    </div>
-    
-
     <div id="sign-links">
         <% if(locals.user){ %>
              
-            <div id="cart-section">
+            <div class="cart-section">
                 <a href="/users/cartpage/<%= locals.user.id %>"><button ><i class="fas fa-shopping-cart"></i>Cart 
                       
                        
@@ -33,7 +26,7 @@
             </div>
             
         <% }else{ %>
-            <div id="cart-section">
+            <div class="cart-section">
                 <a href="/users/sign-in"><button ><i class="fas fa-shopping-cart"></i>Cart</button></a>
             </div>
             <div id="sign-up-btn">
