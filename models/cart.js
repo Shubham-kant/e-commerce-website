@@ -27,7 +27,7 @@ const cartSchema=new mongoose.Schema({
 const Cart=mongoose.model('Cart',cartSchema);
 module.exports=Cart;
 */
-module.exports=function Cart(oldCart){
+module.exports = function Cart(oldCart) {
     this.items=oldCart.items || {};
     this.totalPrice=oldCart.totalPrice || 0;
     this.totalQty=oldCart.totalQty || 0;
@@ -96,7 +96,7 @@ module.exports=function Cart(oldCart){
         }
     }
     this.generateArray=function(){
-        var arr=[];
+        var arr = [];
         for(var id in this.items){
             if(this.items[id]=={})  continue;
             arr.push(this.items[id]);

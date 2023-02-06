@@ -1,24 +1,24 @@
 <link rel="stylesheet" href="/css/home.css">
-<section id="home-page-container">
-    <div id="product-container">
+<section class="home-page-container">
+    <div class="product-container">
         <% for(var i of products){  %>
-            <div id="product-box">
+            <div class="product-box">
                 <a href="/products/<%= i._id %>">
                     <img src="<%= i.avatar %>" alt="<%= i.name %>" width="150" height="200">
+                    <span><%= i.name %></span><br>
+                    <span>Rs <%= i.price %></span>
                 </a>
                 
                 
-                <span><%= i.name %></span><br>
-                <span>Rs <%= i.price %></span>
                 <% if(locals.user){ %>
-                    <span id="cart-symbol"><a href="/users/cart/<%= i._id %>">
+                    <span class="cart-symbol"><a href="/users/cart/<%= i._id %>">
                     
                         <button><i class="fas fa-shopping-cart"></i>Add to Cart</button>
                         
                     </a>
                     </span>
                 <% }else{ %>
-                    <span id="cart-symbol"><a href="/users/sign-in">
+                    <span class="cart-symbol"><a href="/users/sign-in">
                         <button>Add to Cart<i class="fas fa-shopping-cart"></i></button>
                     </a></span>
                 <% } %>

@@ -1,5 +1,5 @@
 /*
-$("#cart-symbol").click(function(e){
+$(".cart-symbol").click(function(e){
     e.preventDefault();
     //var context=this;
     this.parent('div').remove();

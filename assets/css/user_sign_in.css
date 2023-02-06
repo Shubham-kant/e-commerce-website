@@ -36,7 +36,7 @@ body #sign-in-page form {
     font-family: sans-serif;
     outline-color: black; }
   body #sign-in-page form input[type="submit"] {
-    background-color: palevioletred;
+    background-color: #FF9F00;
     color: white;
     font-size: 1rem;
     outline: none;
@@ -49,4 +49,4 @@ body #sign-in-page form {
     margin-left: 1rem; }
     body #sign-in-page form #already-account a {
       text-decoration: none;
-      color: palevioletred; }
+      color: #FF9F00; }

@@ -34,7 +34,7 @@ body #sign-up-page form {
     font-family: sans-serif;
     outline-color: black; }
   body #sign-up-page form input[type="submit"] {
-    background-color: palevioletred;
+    background-color: #FF9F00;
     color: white;
     font-size: 1rem;
     outline: none;
@@ -48,4 +48,4 @@ body #sign-up-page form {
       color: black; }
     body #sign-up-page form #already-account a {
       text-decoration: none;
-      color: palevioletred; }
+      color: #FF9F00; }

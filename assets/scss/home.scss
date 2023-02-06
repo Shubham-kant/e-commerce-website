@@ -6,27 +6,25 @@
     box-sizing: border-box;
 }
 body{
-    #home-page-container{
-        margin-left:5rem;
-        margin-right:5rem;
-        #product-container{
+    .home-page-container{
+        margin-left:20px;
+        margin-right:20px;
+        margin-bottom: 60px;
+        .product-container{
             display:flex;
             justify-content:space-around;
             flex-wrap:wrap;
-            #product-box{
+            .product-box{
                 height:15rem;
                 width:10rem;
-                // border:1px solid black;
-                //position: relative;
-                // background-color:#0066c0;
                 display:inline-block;
                 margin-left:2rem;
                 margin-bottom:4rem;
                 img{
                     display:inline-block;
-                    //position:absolute;
-                    //margin-left:50%;
-                    
+                }
+                span {
+                    color: black;
                 }
                 button{
                     background-color: #FF9F00;

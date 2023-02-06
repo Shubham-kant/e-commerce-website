@@ -1,4 +1,5 @@
 const Product=require('../models/product');
+const Cart=require('../models/cart');
 
 module.exports.home=function(req,res){
     Product.find({},function(err,products){
@@ -13,7 +14,8 @@ module.exports.home=function(req,res){
     });
 }
 module.exports.productDescription=function(req,res){
-    var productId=req.params.id;
+    var productId = req.params.id;
+    let productInCart = false;
     console.log(productId,'product id');
     Product.findById(productId,function(err,product){
         if(err){
@@ -21,9 +23,24 @@ module.exports.productDescription=function(req,res){
             return;
         }
         console.log('viewed product',product);
+        console.log('added products in carts uptil now..',req.session?.cart?.items);
+        let cart = new Cart(req.session.cart ? req.session.cart : {} );
+        let cartItemIds = [];
+        Object.values(cart.generateArray()).forEach(cartItem => {
+            if(cartItem.item) {
+                cartItemIds.push(cartItem?.item?._id);
+            }
+        });
+        console.log(cartItemIds);
+        if(cartItemIds.find(cartItemId => cartItemId === productId)) {
+            productInCart = true;
+            console.log('yes matched')
+            console.log(productInCart);
+        }
         if(product){
             return res.render('product_description',{
-                product:product
+                product:product,
+                productInCart:productInCart
             });
         }
         else{
