@@ -1,50 +1,54 @@
 body{
-    #cart-container{
-
-
-        #cart-item{
+    .cart-container{
+        padding: 30px 12px;
+        .cart-item{
             display:flex;
-            justify-content:space-between;
-            width:60vw;
-            #description{
-                width:20vw;
+            .description{
+                margin-left: 30px;
+                line-height: 26px;
+                p {
+                    .original-price {
+                        text-decoration: line-through;
+                        color: #878787;
+                        font-size: 14px;
+                        margin-right: 10px;
+                    }
+                    .discount-amount {
+                        font-size: 18px;
+                        font-weight: 700;
+                        margin-right: 8px;
+                    }
+                    .discount-perc {
+                        font-size: 14px;
+                        font-weight: 700;
+                        color: #388e3c;
+                    }
+                }
             }
             img{
 
             }
-            #remove-button{
-                height:4vh;
-                width:8vw;
+        }
+        .product-quantity-container {
+            padding:16px 0;
+            .remove-button{
+                
             }
-            
-
-
         }
     }
-        a{
-            input[type="submit"]{
-                display: inline-block;
-              
-                // border-radius:3%;
-                width: 20vw;
-                padding: 0.3rem;
-                font-size: 0.7rem;
-                // outline: blueviolet;
-                font-family: sans-serif;
-                
-                
+    a{
+        input[type="submit"]{
+            display: inline-block;
+            width: 20vw;
+            padding: 0.3rem;
+            font-size: 0.7rem;
+            font-family: sans-serif;     
             background-color: #FF9F00;;
             color:white;
             font-size:1rem;
             outline: none;
             cursor: pointer;
             border:none;
-            }
-        
-
+        }
     }
-
-
-
-
 }

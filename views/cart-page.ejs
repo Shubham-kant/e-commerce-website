@@ -1,43 +1,44 @@
 <link rel="stylesheet" href="/css/cart-page.css">
 <% if(products!=null && products.length>0 ){ %>
-<div id="cart-container">
+<div class="cart-container">
     <h1>Shopping Cart</h1>
 <% for(var i of products){ %>
     <% if(i.item){ %>
-    <div id="cart-item">
-        <div id="description">
+    <div class="cart-item">
+        <img src="<%= i.item.avatar %>" alt="<%= i.name %>" width="112" height="112">
+        <div class="description">
             <span><%= i.item.name %></span>
             <span>(<%= i.item.description %>)</span>
+            <p>Seller:<%= i.item.manufacturer %></p>
+            <p>
+                <span class="original-price">Rs. <%= 2*i.price %> </span>
+                <span class="discount-amount">Rs. <%= i.price %></span>
+                <span class="discount-perc">50% Off</span>
+            </p>
         </div>
-    
-    
-    <img src="<%= i.item.avatar %>" alt="<%= i.name %>" width="50" height="100">
-    
-    
-    <span id="minus-symbol"><a href="/users/cart/product/<%= i.item._id %>">
+    </div>
+    <div class="product-quantity-container">
+    <span class="minus-symbol">
+        <a href="/users/cart/product/<%= i.item._id %>">
         <button><i class="fas fa-minus-circle"></i></button>
     </a>
     </span>
     <span><%= i.qty %></span>
-    
-    
-    <span id="plus-symbol">
+    <span class="plus-symbol">
         <a href="/users/cart/<%= i.item._id %>">
             <button><i class="fas fa-plus-circle"></i></button>
         </a>
     </span>
-    <span><%= i.price %></span>
-
-    <button id="remove-button">
+    <button class="remove-button">
         <a href="/users/cart/removeproduct/<%= i.item._id %>">Remove</a>
     </button>
-    </div>
+</div>
 <% } %>
 <% } %>
 </div>
 
-<div><h1>Total quantity:<%= totalQty %></h1></div>
-<div><h1>Total price:<%= totalPrice %></h1></div>
+<div>Total quantity:<%= totalQty %></div>
+<div>Total price:<%= totalPrice %></div>
 <a href="/users/cartpage/<%= locals.user.id %>/checkout"><input type="submit" value="Checkout"></a>
 <% }else{ %>
     <h1>Your Basket is empty.</h1>
