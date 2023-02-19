@@ -35,6 +35,10 @@ body .cart-container {
         border-radius: 50%;
         padding-top: 1px;
         line-height: 1; }
+        body .cart-container .product-quantity-container a .quantity-change-btn.disabled {
+          color: #c2c2c2;
+          border-color: #e0e0e0;
+          cursor: default; }
     body .cart-container .product-quantity-container .remove-button {
       display: inline-block;
       text-transform: uppercase;

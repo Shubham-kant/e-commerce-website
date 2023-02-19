@@ -19,7 +19,11 @@
     </div>
     <div class="product-quantity-container">
         <a href="/users/cart/product/<%= i.item._id %>">
+        <% if(i.qty > 1){ %>
             <button class="quantity-change-btn">-</button>
+        <% }else{ %>
+            <button class="quantity-change-btn disabled" disabled>-</button>
+        <% } %>
         </a>
         <span class="product-quantity"><%= i.qty %></span>
         <!-- todo : add a input for quantity just like as flipkart -->

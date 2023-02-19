@@ -47,6 +47,11 @@ body{
                     border-radius: 50%;
                     padding-top: 1px;
                     line-height: 1;
+                    &.disabled {
+                        color: #c2c2c2;
+                        border-color: #e0e0e0;
+                        cursor: default;
+                    }
                 }
             }
             .remove-button{
