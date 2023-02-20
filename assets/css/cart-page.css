@@ -1,70 +1,71 @@
-body .cart-container {
-  padding: 30px 12px; }
-  body .cart-container .cart-item {
-    display: flex; }
-    body .cart-container .cart-item .description {
-      margin-left: 30px;
-      line-height: 26px; }
-      body .cart-container .cart-item .description p .original-price {
-        text-decoration: line-through;
-        color: #878787;
-        font-size: 14px;
-        margin-right: 10px; }
-      body .cart-container .cart-item .description p .discount-amount {
-        font-size: 18px;
-        font-weight: 700;
-        margin-right: 8px; }
-      body .cart-container .cart-item .description p .discount-perc {
-        font-size: 14px;
-        font-weight: 700;
-        color: #388e3c; }
-  body .cart-container .product-quantity-container {
-    padding: 16px 0; }
-    body .cart-container .product-quantity-container .product-quantity {
-      padding: 0px 6px; }
-    body .cart-container .product-quantity-container a {
-      text-decoration: none; }
-      body .cart-container .product-quantity-container a .quantity-change-btn {
-        width: 28px;
-        height: 28px;
-        background: linear-gradient(#fff, #f9f9f9);
+body .user-cartpage {
+  display: flex; }
+  body .user-cartpage .cart-container {
+    padding: 30px 12px; }
+    body .user-cartpage .cart-container .cart-item {
+      display: flex; }
+      body .user-cartpage .cart-container .cart-item .description {
+        margin-left: 30px;
+        line-height: 26px; }
+        body .user-cartpage .cart-container .cart-item .description p .original-price {
+          text-decoration: line-through;
+          color: #878787;
+          font-size: 14px;
+          margin-right: 10px; }
+        body .user-cartpage .cart-container .cart-item .description p .discount-amount {
+          font-size: 18px;
+          font-weight: 700;
+          margin-right: 8px; }
+        body .user-cartpage .cart-container .cart-item .description p .discount-perc {
+          font-size: 14px;
+          font-weight: 700;
+          color: #388e3c; }
+    body .user-cartpage .cart-container .product-quantity-container {
+      padding: 16px 0; }
+      body .user-cartpage .cart-container .product-quantity-container .product-quantity {
+        padding: 0px 6px; }
+      body .user-cartpage .cart-container .product-quantity-container a {
+        text-decoration: none; }
+        body .user-cartpage .cart-container .product-quantity-container a .quantity-change-btn {
+          width: 28px;
+          height: 28px;
+          background: linear-gradient(#fff, #f9f9f9);
+          display: inline-block;
+          border: 1px solid #c2c2c2;
+          cursor: pointer;
+          font-size: 16px;
+          border-radius: 50%;
+          padding-top: 1px;
+          line-height: 1; }
+          body .user-cartpage .cart-container .product-quantity-container a .quantity-change-btn.disabled {
+            color: #c2c2c2;
+            border-color: #e0e0e0;
+            cursor: default; }
+      body .user-cartpage .cart-container .product-quantity-container .remove-button {
         display: inline-block;
-        border: 1px solid #c2c2c2;
-        cursor: pointer;
+        text-transform: uppercase;
+        box-shadow: none;
+        outline: 0;
         font-size: 16px;
-        border-radius: 50%;
-        padding-top: 1px;
-        line-height: 1; }
-        body .cart-container .product-quantity-container a .quantity-change-btn.disabled {
-          color: #c2c2c2;
-          border-color: #e0e0e0;
-          cursor: default; }
-    body .cart-container .product-quantity-container .remove-button {
-      display: inline-block;
-      text-transform: uppercase;
-      box-shadow: none;
-      outline: 0;
+        font-weight: 500;
+        cursor: pointer;
+        margin-right: 25px;
+        background: transparent;
+        border: none;
+        padding-left: 24px; }
+        body .user-cartpage .cart-container .product-quantity-container .remove-button a {
+          text-decoration: none;
+          color: black; }
+    body .user-cartpage .cart-container a input[type="submit"] {
+      width: 200px;
+      padding: 12px;
       font-size: 16px;
-      font-weight: 500;
+      font-weight: 600;
+      text-transform: uppercase;
+      background-color: #fb641b;
+      display: inline-block;
+      font-family: sans-serif;
+      color: white;
+      outline: none;
       cursor: pointer;
-      margin-right: 25px;
-      background: transparent;
-      border: none;
-      padding-left: 24px; }
-      body .cart-container .product-quantity-container .remove-button a {
-        text-decoration: none;
-        color: black; }
-
-body a input[type="submit"] {
-  width: 200px;
-  padding: 12px;
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: uppercase;
-  background-color: #fb641b;
-  display: inline-block;
-  font-family: sans-serif;
-  color: white;
-  outline: none;
-  cursor: pointer;
-  border: none; }
+      border: none; }
