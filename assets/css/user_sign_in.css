@@ -43,10 +43,8 @@ body #sign-in-page form {
     cursor: pointer;
     border: none;
     border-radius: 3%; }
-  body #sign-in-page form #already-account {
-    height: 2rem;
-    width: 15rem;
-    margin-left: 1rem; }
-    body #sign-in-page form #already-account a {
+  body #sign-in-page form .already-account {
+    padding: 4px; }
+    body #sign-in-page form .already-account a {
       text-decoration: none;
       color: #FF9F00; }

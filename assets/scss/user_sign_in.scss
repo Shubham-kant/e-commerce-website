@@ -1,21 +1,14 @@
 body{
-    // background-image:url("/images/background.jpg");
-    // background-size: cover;
-#sign-in-page{
-    // margin:auto;
-    h2{
+.sign-in-page {
+    .sign-in-heading {
         font-family:arial;
-        // margin:auto;
         text-align: center;
-        font-weight: bold;
-        // margin-left:50%;
+        font-weight: 700;
     }
     form{
         background-color:white;
         height: 20rem;
         width: 18rem;
-        
-        // margin-left: 24rem;
         border-radius:3%;
         margin:auto;
         h2{
@@ -71,13 +64,8 @@ body{
             border-radius:3%;
             
         }
-        #already-account{
-            height: 2rem;
-            width: 15rem;
-            // background-color: red;
-            // box-shadow: 0px 0px 6px 4px rgba(230,196,196,0.7); 
-            // border-style:outset;
-            margin-left: 1rem;
+        .already-account{
+            padding: 4px;
             a{
                 text-decoration:none;
                 color:#FF9F00;;
