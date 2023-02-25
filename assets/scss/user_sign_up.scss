@@ -1,87 +1,101 @@
-body{
+body {
 .sign-up-page {
-    .sign-up-heading {
-        font-family:arial;
-        text-align: center;
-        font-weight: 600;
+    display: flex;
+    justify-content: center; 
+    padding: 20px; 
+    margin: 40px;
+    height: 400px;
+    min-width: 650px;
+    // max-width: 750px;
+    .sign-up-heading-container {
+        background-color: #2874F0;
+        max-width: 214px;
+        border-radius: 5px;
+        padding: 20px 24px;
+        background-image: url('../images/yourkart-logo.jpg');
+        background-position: center 180px;
+        background-repeat: no-repeat;
+        .sign-up-heading {
+            font-family:arial;
+            padding-left: 10px;
+            font-weight: 600;
+            color: white;
+        }
+        .user-features-copy {
+            color: white;
+            padding: 10px;
+        }
+        img {
+            z-index: 2;
+        }
     }
-    form{
-        background-color: white;
-       
-        height: 26rem;
-        width: 18rem;
-        
-        border-radius:3%;
-        margin:auto;
-        
-        //google-sign-up
-        #google-sign-up{
-            height: 2rem;
-          
-            width: 15rem;
-            background-color:white;
-            // background-color: red;
-            // box-shadow: 0px 0px 6px 4px rgba(230,196,196,0.7); 
-            border-style:outset;
-            margin-left: 1.5rem;
+    .sign-up-form-container {
+        padding: 4px 32px;
+        form{
+            background-color: white;
+           
+            height: 26rem;
+            width: 18rem;
             border-radius:3%;
-            a{
-                text-decoration:none;
-                color: black;
-                font-size: bold;
-                font-family:sans-serif;
-                font-size:0.9rem;
-                
-                span{
-                    position:relative;
-                    top:-0.4rem;
-                }
-                
-                
-            }
-    
-        }
-
-        input{
-            display: inline-block;
-            margin-top: 0.5rem;
-            // border-radius:3%;
-            width: 15rem;
-            padding: 0.8rem;
-            font-size: 0.7rem;
-            // outline: blueviolet;
-            font-family: sans-serif;
-            outline-color:black;
+            margin:auto;
+            //google-sign-up
+            // #google-sign-up{
+            //     height: 2rem;
+            //     width: 15rem;
+            //     background-color:white;
+            //     border-style:outset;
+            //     margin-left: 1.5rem;
+            //     border-radius:3%;
+            //     a{
+            //         text-decoration:none;
+            //         color: black;
+            //         font-size: bold;
+            //         font-family:sans-serif;
+            //         font-size:0.9rem;
+                    
+            //         span{
+            //             position:relative;
+            //             top:-0.4rem;
+            //         }
+                    
+                    
+            //     }
         
-
-        }
-        input[type="submit"]{
-            
-            // background-color: #d72be3;
-            background-color: #FF9F00;;
-            color:white;
-            font-size:1rem;
-            outline: none;
-            cursor: pointer;
-            border:none;
-            
-        }
-        .already-account{
-            padding: 4px;
-            span{
-                color:black;
+            // }
+            input {
+                display: inline-block;
+                margin-top: 14px;
+                width: 250px;
+                padding: 12px;
+                font-family: sans-serif;
+                outline-color:black;
+                font-size: 16px;
             }
-            a{
-                text-decoration:none;
-                color:#FF9F00;;
-                
+            input[type="submit"] {
+                background-color: #FF9F00;;
+                color:white;
+                font-size:20px;
+                font-weight: 600;
+                outline: none;
+                cursor: pointer;
+                border:none;
+                padding:14px;
+                margin-top: 24px;
+                box-shadow: 0px 1px 2px 0px #00000033;
+            }
+            .already-account{
+                padding:10px 6px;
+                span{
+                    color:black;
+                }
+                a{
+                    text-decoration:none;
+                    color:#FF9F00;;
+                    
+                }
             }
         }
     }
-    
-    
-   
-
 
 }
 }

@@ -1,49 +1,59 @@
-body .sign-up-page .sign-up-heading {
-  font-family: arial;
-  text-align: center;
-  font-weight: 600; }
-
-body .sign-up-page form {
-  background-color: white;
-  height: 26rem;
-  width: 18rem;
-  border-radius: 3%;
-  margin: auto; }
-  body .sign-up-page form #google-sign-up {
-    height: 2rem;
-    width: 15rem;
-    background-color: white;
-    border-style: outset;
-    margin-left: 1.5rem;
-    border-radius: 3%; }
-    body .sign-up-page form #google-sign-up a {
-      text-decoration: none;
-      color: black;
-      font-size: bold;
-      font-family: sans-serif;
-      font-size: 0.9rem; }
-      body .sign-up-page form #google-sign-up a span {
-        position: relative;
-        top: -0.4rem; }
-  body .sign-up-page form input {
-    display: inline-block;
-    margin-top: 0.5rem;
-    width: 15rem;
-    padding: 0.8rem;
-    font-size: 0.7rem;
-    font-family: sans-serif;
-    outline-color: black; }
-  body .sign-up-page form input[type="submit"] {
-    background-color: #FF9F00;
-    color: white;
-    font-size: 1rem;
-    outline: none;
-    cursor: pointer;
-    border: none; }
-  body .sign-up-page form .already-account {
-    padding: 4px; }
-    body .sign-up-page form .already-account span {
-      color: black; }
-    body .sign-up-page form .already-account a {
-      text-decoration: none;
-      color: #FF9F00; }
+body .sign-up-page {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 40px;
+  height: 400px;
+  min-width: 650px; }
+  body .sign-up-page .sign-up-heading-container {
+    background-color: #2874F0;
+    max-width: 214px;
+    border-radius: 5px;
+    padding: 20px 24px;
+    background-image: url("../images/yourkart-logo.jpg");
+    background-position: center 180px;
+    background-repeat: no-repeat; }
+    body .sign-up-page .sign-up-heading-container .sign-up-heading {
+      font-family: arial;
+      padding-left: 10px;
+      font-weight: 600;
+      color: white; }
+    body .sign-up-page .sign-up-heading-container .user-features-copy {
+      color: white;
+      padding: 10px; }
+    body .sign-up-page .sign-up-heading-container img {
+      z-index: 2; }
+  body .sign-up-page .sign-up-form-container {
+    padding: 4px 32px; }
+    body .sign-up-page .sign-up-form-container form {
+      background-color: white;
+      height: 26rem;
+      width: 18rem;
+      border-radius: 3%;
+      margin: auto; }
+      body .sign-up-page .sign-up-form-container form input {
+        display: inline-block;
+        margin-top: 14px;
+        width: 250px;
+        padding: 12px;
+        font-family: sans-serif;
+        outline-color: black;
+        font-size: 16px; }
+      body .sign-up-page .sign-up-form-container form input[type="submit"] {
+        background-color: #FF9F00;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        padding: 14px;
+        margin-top: 24px;
+        box-shadow: 0px 1px 2px 0px #00000033; }
+      body .sign-up-page .sign-up-form-container form .already-account {
+        padding: 10px 6px; }
+        body .sign-up-page .sign-up-form-container form .already-account span {
+          color: black; }
+        body .sign-up-page .sign-up-form-container form .already-account a {
+          text-decoration: none;
+          color: #FF9F00; }
