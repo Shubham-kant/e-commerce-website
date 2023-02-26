@@ -2,45 +2,50 @@
 <% if(products!=null && products.length>0 ){ %>
 <div class="user-cartpage">
     <div class="cart-container">
-    <h1>Shopping Cart</h1>
     <% for(var i of products){ %>
         <% if(i.item){ %>
-        <div class="cart-item">
-            <img src="<%= i.item.avatar %>" alt="<%= i.name %>" width="112" height="112">
-            <div class="description">
-                <span><%= i.item.name %></span>
-                <span>(<%= i.item.description %>)</span>
-                <p>Seller:<%= i.item.manufacturer %></p>
-                <p>
-                    <span class="original-price">Rs. <%= 2*i.price %> </span>
-                    <span class="discount-amount">Rs. <%= i.price %></span>
-                    <span class="discount-perc">50% Off</span>
-                </p>
+            <div class="cart-item-container">
+                <div class="cart-item">
+                    <img src="<%= i.item.avatar %>" alt="<%= i.name %>" width="112" height="112">
+                    <div class="description">
+                        <span><%= i.item.name %></span>
+                        <span>(<%= i.item.description %>)</span>
+                        <p>Seller:<%= i.item.manufacturer %></p>
+                        <p>
+                            <span class="original-price">Rs. <%= 2*i.price %> </span>
+                            <span class="discount-amount">Rs. <%= i.price %></span>
+                            <span class="discount-perc">50% Off</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="product-quantity-container">
+                    <a href="/users/cart/product/<%= i.item._id %>">
+                    <% if(i.qty > 1){ %>
+                        <button class="quantity-change-btn">-</button>
+                    <% }else{ %>
+                        <button class="quantity-change-btn disabled" disabled>-</button>
+                    <% } %>
+                    </a>
+                    <span class="product-quantity"><%= i.qty %></span>
+                    <!-- todo : add a input for quantity just like as flipkart -->
+                    <!-- <div>
+                        <input type="text" name="" id="" value="<%= i.qty %>">
+                    </div> -->
+                    <a href="/users/cart/<%= i.item._id %>">
+                        <button class="quantity-change-btn">+</button>
+                    </a>
+                    <button class="remove-button">
+                        <a href="/users/cart/removeproduct/<%= i.item._id %>">Remove</a>
+                    </button>
+                </div>
             </div>
-        </div>
-        <div class="product-quantity-container">
-            <a href="/users/cart/product/<%= i.item._id %>">
-            <% if(i.qty > 1){ %>
-                <button class="quantity-change-btn">-</button>
-            <% }else{ %>
-                <button class="quantity-change-btn disabled" disabled>-</button>
-            <% } %>
-            </a>
-            <span class="product-quantity"><%= i.qty %></span>
-            <!-- todo : add a input for quantity just like as flipkart -->
-            <!-- <div>
-                <input type="text" name="" id="" value="<%= i.qty %>">
-            </div> -->
-            <a href="/users/cart/<%= i.item._id %>">
-                <button class="quantity-change-btn">+</button>
-            </a>
-            <button class="remove-button">
-                <a href="/users/cart/removeproduct/<%= i.item._id %>">Remove</a>
-            </button>
-        </div>
     <% } %>
     <% } %>
-    <a href="/users/cartpage/<%= locals.user.id %>/checkout"><input type="submit" value="Checkout"></a>
+    <div class="checkout-btn">
+        <a href="/users/cartpage/<%= locals.user.id %>/checkout">
+            <input type="submit" value="Checkout">
+        </a>
+    </div>
     </div>
     <div class="price-details">
         <h1>PRICE DETAILS</h1>
