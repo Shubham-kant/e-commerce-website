@@ -3,8 +3,8 @@
 
 <img src="<%= product.avatar %>" alt="<%= product.name %>" width="150" height="200">
 <p><%= product.description %></p>
-<p>Rs <%= product.price %></p>
-<p>Rs <%= productInCart %></p>
+<p>₹ <%= product.price %></p>
+<p>₹ <%= productInCart %></p>
 <% if(locals.user){ %>
     <span class="cart-symbol"><a href="/users/cart/<%= product._id %>">
         <button>
