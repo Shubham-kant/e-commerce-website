@@ -12,8 +12,8 @@
                         <span>(<%= i.item.description %>)</span>
                         <p>Seller:<%= i.item.manufacturer %></p>
                         <p>
-                            <span class="original-price">Rs. <%= 2*i.price %> </span>
-                            <span class="discount-amount">Rs. <%= i.price %></span>
+                            <span class="original-price">₹. <%= 2*i.price %> </span>
+                            <span class="discount-amount">₹. <%= i.price %></span>
                             <span class="discount-perc">50% Off</span>
                         </p>
                     </div>
@@ -49,8 +49,22 @@
     </div>
     <div class="price-details">
         <h1>PRICE DETAILS</h1>
-        <p>Total quantity:<%= totalQty %></p>
-        <p>Total price:<%= totalPrice %></p>
+        <div class="product-pricing">
+            <p>Total quantity(₹. <%= totalQty %> items)</p>
+            <p>₹<%= totalPrice %></p>
+        </div>
+        <div class="product-pricing">
+            <span>Discount</span>
+            <p>-₹<%= totalPrice/2 %></p>
+        </div>
+        <div class="product-pricing">
+            <p>Delivery Charges</p>
+            <p>Free</p>
+        </div>
+        <div class="product-pricing">
+            <p>Total Amount</p>
+            <p>₹<%= totalPrice/2 %></p>
+        </div>
     </div>
 </div>
 

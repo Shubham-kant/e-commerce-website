@@ -120,6 +120,11 @@ body{
             background: #fff;
             margin: 20px;
             width: 25%;
+            .product-pricing {
+                display: flex;
+                justify-content: space-between;
+                padding: 16px 20px;
+            }
         }
     }
     

@@ -92,3 +92,7 @@ body .user-cartpage {
     background: #fff;
     margin: 20px;
     width: 25%; }
+    body .user-cartpage .price-details .product-pricing {
+      display: flex;
+      justify-content: space-between;
+      padding: 16px 20px; }
