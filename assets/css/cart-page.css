@@ -88,11 +88,34 @@ body .user-cartpage {
         outline: none;
         cursor: pointer;
         border: none; }
-  body .user-cartpage .price-details {
+  body .user-cartpage .price-details-container {
     background: #fff;
     margin: 20px;
-    width: 25%; }
-    body .user-cartpage .price-details .product-pricing {
+    width: 25%;
+    min-height: 300px;
+    height: 300px; }
+    body .user-cartpage .price-details-container .price-details-heading {
+      font-size: 16px;
+      color: #878787;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 12px 20px;
+      min-height: 48px;
+      border-bottom: 1px solid #f0f0f0; }
+    body .user-cartpage .price-details-container .product-pricing {
       display: flex;
       justify-content: space-between;
       padding: 16px 20px; }
+    body .user-cartpage .price-details-container .total-amount {
+      border-top: 1px dashed #e0e0e0;
+      font-weight: 600;
+      font-size: 18px;
+      margin: 0 4px; }
+    body .user-cartpage .price-details-container .amount-calc {
+      color: #388e3c;
+      font-weight: 500; }
+    body .user-cartpage .price-details-container .saving {
+      border-top: 1px dashed #e0e0e0;
+      padding: 12px 24px;
+      font-size: 16px;
+      margin: 0 4px; }
