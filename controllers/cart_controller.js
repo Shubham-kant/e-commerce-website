@@ -3,7 +3,8 @@ const Cart=require('../models/cart');
 const User=require('../models/user');
 const Product=require('../models/product');
 // const cart = require('../models/cart');
-
+const days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+const months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
 module.exports.addProductsInCart = function(req,res){
     var product_id = req.params.id;
@@ -45,9 +46,11 @@ module.exports.cartPage=function(req,res){
     console.log(cart);
     console.log(req.session.cart);
     var cart = new Cart(req.session.cart);
-    
+    let deliveryDetails = getDeliveryDetails();
+    console.log(deliveryDetails);
     return res.render('cart-page',{
         products:cart.generateArray(),
+        deliveryDetails: deliveryDetails,
         totalPrice:cart.totalPrice,
         totalQty:cart.totalQty
     })
@@ -79,6 +82,7 @@ module.exports.decrementQuantity = function(req,res){
         else{
             res.locals.isCart = false;
         }
+        console.log('quantity decremented');
         return res.redirect('back');
     });
 
@@ -102,8 +106,11 @@ module.exports.removeProduct=function(req,res){
         else{
             res.locals.isCart=false;
             console.log('false case',cart.totalQty);
+            let deliveryDetails = getDeliveryDetails();
+            console.log(deliveryDetails);
             return res.render('cart-page',{
                 products:cart.generateArray(),
+                deliveryDetails: deliveryDetails,
                 totalPrice:cart.totalPrice,
                 totalQty:cart.totalQty
             })
@@ -111,4 +118,17 @@ module.exports.removeProduct=function(req,res){
         return res.redirect('back');
         // return res.render();
     })
+}
+
+
+function getDeliveryDetails() {
+    let someDate = new Date();
+    let numberOfDaysToAdd = 3;
+    let result = someDate.setDate(someDate.getDate() + numberOfDaysToAdd);
+    let deliveryDetails = {
+        day : days[new Date(result).getDay()],
+        date : new Date(result).getDate(),
+        month : months[new Date(result).getMonth()]
+    }
+    return deliveryDetails;
 }
