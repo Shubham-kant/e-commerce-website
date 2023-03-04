@@ -12,8 +12,8 @@
                         <span>(<%= i.item.description %>)</span>
                         <p>Seller:<%= i.item.manufacturer %></p>
                         <p>
-                            <span class="original-price">₹. <%= 2*i.price %> </span>
-                            <span class="discount-amount">₹. <%= i.price %></span>
+                            <span class="original-price">₹<%= 2*i.price %> </span>
+                            <span class="discount-amount">₹<%= i.price %></span>
                             <span class="discount-perc">50% Off</span>
                         </p>
                     </div>
@@ -47,24 +47,25 @@
         </a>
     </div>
     </div>
-    <div class="price-details">
-        <h1>PRICE DETAILS</h1>
+    <div class="price-details-container">
+        <p class="price-details-heading">Price Details</p>
         <div class="product-pricing">
-            <p>Total quantity(₹. <%= totalQty %> items)</p>
-            <p>₹<%= totalPrice %></p>
+            <p>Total quantity(<%= totalQty %> items)</p>
+            <p class="amount-calc">₹<%= totalPrice %></p>
         </div>
         <div class="product-pricing">
-            <span>Discount</span>
-            <p>-₹<%= totalPrice/2 %></p>
+            <p>Discount</p>
+            <p class="amount-calc">-₹<%= totalPrice/2 %></p>
         </div>
         <div class="product-pricing">
             <p>Delivery Charges</p>
-            <p>Free</p>
+            <p class="amount-calc">Free</p>
         </div>
-        <div class="product-pricing">
+        <div class="product-pricing total-amount">
             <p>Total Amount</p>
             <p>₹<%= totalPrice/2 %></p>
         </div>
+        <div class="saving amount-calc">You will save ₹<%= totalPrice/2 %> on this order</div>
     </div>
 </div>
 
