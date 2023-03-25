@@ -30,6 +30,14 @@ const productSchema=new mongoose.Schema({
         type:String,
         required:true
     },
+    detaildescription: {
+        type:String,
+        required:true
+    },
+    highlights: {
+        type:String,
+        required:true
+    },
     manufacturer:{
         type:String,
         required:true
@@ -64,5 +72,5 @@ productSchema.statics.avatarPath=AVATAR_PATH;
 
 
 
-const Product=mongoose.model('Product',productSchema);
-module.exports=Product;
+const Product = mongoose.model('Product',productSchema);
+module.exports = Product;

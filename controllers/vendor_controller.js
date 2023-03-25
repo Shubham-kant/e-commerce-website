@@ -25,8 +25,7 @@ module.exports.avatarUpload=function(req,res,product){
 */
 
 module.exports.create=function(req,res){
-    //console.log(req.body);
-    //console.log(req.file);
+    console.log('req.body::',req.body);
     Product.create({
         product_id:req.body.productid,
         name:req.body.name,
@@ -35,13 +34,15 @@ module.exports.create=function(req,res){
         subtype:req.body.subtype,
         description:req.body.description,
         manufacturer:req.body.manufacturer,
+        detaildescription:req.body.detaildescription,
+        highlights:req.body.highlights,
         stock:req.body.stock,
         avatar:AVATAR_PATH+'/'+req.file.filename
        // avatar:Product.avatarPath+'/'+req.file.fieldname
 
     },function(err,product){
         if(err){
-            console.log('error in creating a product');
+            console.log('error in creating a product::',err);
             return;
         }
         //avatarUpload(product);

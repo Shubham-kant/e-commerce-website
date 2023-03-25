@@ -31,6 +31,7 @@ module.exports.productDescription=function(req,res){
                 cartItemIds.push(cartItem?.item?._id);
             }
         });
+        const productHighlights = product.highlights.split(',');
         console.log(cartItemIds);
         if(cartItemIds.find(cartItemId => cartItemId === productId)) {
             productInCart = true;
@@ -40,6 +41,7 @@ module.exports.productDescription=function(req,res){
         if(product){
             return res.render('product_description',{
                 product:product,
+                productHighlights : productHighlights,
                 productInCart:productInCart
             });
         }

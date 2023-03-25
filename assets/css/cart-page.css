@@ -6,35 +6,58 @@ body {
     margin-bottom: 50px; }
     body .user-cartpage .cart-container {
       background: #fff;
-      margin: 20px;
+      margin: 20px 10px;
       box-shadow: #00000033 0px 1px 2px 0px;
       width: 66%; }
       body .user-cartpage .cart-container .cart-item-container {
         border-top: 1px solid #f0f0f0;
         background: #fff;
         max-width: 950px;
-        padding: 24px; }
+        padding: 24px 12px; }
         body .user-cartpage .cart-container .cart-item-container .cart-item {
-          padding: 30px 12px;
+          padding: 10px 12px;
           display: flex; }
-          body .user-cartpage .cart-container .cart-item-container .cart-item .description {
-            margin-left: 30px;
-            line-height: 26px; }
-            body .user-cartpage .cart-container .cart-item-container .cart-item .description p .original-price {
-              text-decoration: line-through;
-              color: #878787;
+          body .user-cartpage .cart-container .cart-item-container .cart-item .description-container {
+            display: flex; }
+            body .user-cartpage .cart-container .cart-item-container .cart-item .description-container .description {
+              padding: 0 24px 12px;
+              vertical-align: top;
+              min-height: 112px;
+              height: 120px;
+              width: 400px;
+              overflow: hidden;
+              max-width: 460px;
+              line-height: 26px; }
+              body .user-cartpage .cart-container .cart-item-container .cart-item .description-container .description .product-name {
+                cursor: pointer; }
+              body .user-cartpage .cart-container .cart-item-container .cart-item .description-container .description .seller-info {
+                display: block;
+                color: #878787;
+                font-size: 14px;
+                height: 20px; }
+              body .user-cartpage .cart-container .cart-item-container .cart-item .description-container .description .cart-item-price {
+                padding: 40px 0; }
+                body .user-cartpage .cart-container .cart-item-container .cart-item .description-container .description .cart-item-price .original-price {
+                  text-decoration: line-through;
+                  color: #878787;
+                  font-size: 14px;
+                  margin-right: 10px; }
+                body .user-cartpage .cart-container .cart-item-container .cart-item .description-container .description .cart-item-price .discount-amount {
+                  font-size: 18px;
+                  font-weight: 700;
+                  margin-right: 8px; }
+                body .user-cartpage .cart-container .cart-item-container .cart-item .description-container .description .cart-item-price .discount-perc {
+                  font-size: 14px;
+                  font-weight: 700;
+                  color: #388e3c; }
+            body .user-cartpage .cart-container .cart-item-container .cart-item .description-container .delivery-details .free-delivery {
               font-size: 14px;
-              margin-right: 10px; }
-            body .user-cartpage .cart-container .cart-item-container .cart-item .description p .discount-amount {
-              font-size: 18px;
-              font-weight: 700;
-              margin-right: 8px; }
-            body .user-cartpage .cart-container .cart-item-container .cart-item .description p .discount-perc {
-              font-size: 14px;
-              font-weight: 700;
               color: #388e3c; }
+            body .user-cartpage .cart-container .cart-item-container .cart-item .description-container .delivery-details .delivery-price {
+              text-decoration: line-through;
+              color: #717478; }
         body .user-cartpage .cart-container .cart-item-container .product-quantity-container {
-          padding: 16px 0; }
+          padding: 0px 12px; }
           body .user-cartpage .cart-container .cart-item-container .product-quantity-container .product-quantity {
             padding: 0px 6px; }
           body .user-cartpage .cart-container .cart-item-container .product-quantity-container a {
@@ -95,7 +118,7 @@ body {
           border: none; }
     body .user-cartpage .price-details-container {
       background: #fff;
-      margin: 20px;
+      margin: 20px 10px;
       width: 33%;
       min-height: 300px;
       height: fit-content;
