@@ -2,15 +2,25 @@
   display: flex;
   padding: 16px;
   margin-bottom: 50px; }
+  @media screen and (max-width: 600px) {
+    .product-description-container {
+      flex-direction: column; } }
   .product-description-container .product-image-container {
-    width: 32%;
+    width: 30%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     padding-right: 12px; }
+    @media screen and (max-width: 600px) {
+      .product-description-container .product-image-container {
+        width: 100%; } }
     .product-description-container .product-image-container .image-section {
       border: 1px solid #f0f0f0;
-      padding: 16px; }
+      padding: 16px;
+      max-width: 352px;
+      max-height: 400px; }
+      .product-description-container .product-image-container .image-section img {
+        width: 100%;
+        height: 100%; }
     .product-description-container .product-image-container .cart-btn-section {
       padding-top: 12px;
       display: flex;
@@ -32,7 +42,10 @@
         .product-description-container .product-image-container .cart-btn-section a .cart-btn i {
           margin-right: 8px; }
   .product-description-container .product-info-container {
-    width: 64%; }
+    width: 70%; }
+    @media screen and (max-width: 600px) {
+      .product-description-container .product-info-container {
+        width: 90%; } }
     .product-description-container .product-info-container .product-path-section .destination-url {
       font-size: 14px;
       text-decoration: none;
@@ -81,6 +94,9 @@
     .product-description-container .product-info-container .highlight-container {
       display: flex;
       padding-top: 24px; }
+      @media screen and (max-width: 600px) {
+        .product-description-container .product-info-container .highlight-container {
+          flex-direction: column; } }
       .product-description-container .product-info-container .highlight-container .highlight-heading {
         font-weight: 500;
         font-size: 16px;
@@ -94,6 +110,9 @@
       display: flex;
       font-size: 14px;
       margin-top: 24px; }
+      @media screen and (max-width: 600px) {
+        .product-description-container .product-info-container .detail-description-container {
+          flex-direction: column; } }
       .product-description-container .product-info-container .detail-description-container .detail-description-heading {
         font-weight: 500;
         color: #878787;

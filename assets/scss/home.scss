@@ -1,3 +1,11 @@
+$breakpoints: (
+    'xs': 0px,
+    'sm': 320px,
+    'md': 425px,
+    'lg': 768px,
+    'xl': 1024px,
+    'xlg': 1440px
+);
 /* css reset */
 *{
     margin:0;
