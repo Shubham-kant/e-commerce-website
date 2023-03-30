@@ -7,18 +7,24 @@
             <div class="cart-item-container">
                 <div class="cart-item">
                     <img src="<%= i.item.avatar %>" alt="<%= i.name %>" width="112" height="112">
-                    <div>
+                    <div class="description-container">
                         <div class="description">
-                            <span><%= i.item.name %></span>
-                            <span>(<%= i.item.description %>)</span>
-                            <p>Seller:<%= i.item.manufacturer %></p>
-                            <p>
-                                <span class="original-price">₹<%= 2*i.price %> </span>
+                            <div class="product-name">
+                                <span><%= i.item.name %></span>
+                                <% if(i.item.name.length + i.item.description.length > 43){ %>
+                                    <span>(<%= i.item.description.substring(0,15) + "..." %></span>
+                                <% }else{ %>
+                                    <span>(<%= i.item.description %>)</span>
+                                <% } %>
+                                </div>
+                            <p class="seller-info">Seller:<%= i.item.manufacturer %></p>
+                            <p class="cart-item-price">
                                 <span class="discount-amount">₹<%= i.price %></span>
+                                <span class="original-price">₹<%= 2*i.price %> </span>
                                 <span class="discount-perc">50% Off</span>
                             </p>
                         </div>
-                        <div class="delivery-details">Delivery by <%= deliveryDetails.day %> <%= deliveryDetails.month %>  <%= deliveryDetails.date %>  | Free₹40</div>
+                        <div class="delivery-details">Delivery by <%= deliveryDetails.day %>, <%= deliveryDetails.month %>  <%= deliveryDetails.date %>  | <span class="free-delivery">Free</span> <span class="delivery-price">₹40</span></div>
                     </div>
                 </div>
                 <div class="product-quantity-container">
@@ -54,11 +60,11 @@
         <p class="price-details-heading">Price Details</p>
         <div class="product-pricing">
             <p>Price(<%= totalQty %> items)</p>
-            <p class="amount-calc">₹<%= totalPrice %></p>
+            <p class="amount-calc">₹<%= 2* totalPrice %></p>
         </div>
         <div class="product-pricing">
             <p>Discount</p>
-            <p class="amount-calc">-₹<%= totalPrice/2 %></p>
+            <p class="amount-calc">-₹<%= totalPrice %></p>
         </div>
         <div class="product-pricing">
             <p>Delivery Charges</p>
@@ -66,9 +72,9 @@
         </div>
         <div class="product-pricing total-amount">
             <p>Total Amount</p>
-            <p>₹<%= totalPrice/2 %></p>
+            <p>₹<%= totalPrice %></p>
         </div>
-        <div class="saving amount-calc">You will save ₹<%= totalPrice/2 %> on this order</div>
+        <div class="saving amount-calc">You will save ₹<%= totalPrice %> on this order</div>
     </div>
 </div>
 
