@@ -3,19 +3,25 @@
         <a href="/"><h2 class="heading">Yourkart</h2></a>
     </div>
         <form class="search-bar">
-            <input type="name" name="productname" placeholder="search for products">
-            
+            <input type="name" name="productname" placeholder="Search for products, brands and more">
         </form>
     <div class="sign-links">
         <% if(locals.user){ %>
              
             <div class="cart-section">
-                <a href="/users/cartpage/<%= locals.user.id %>"><button ><i class="fas fa-shopping-cart"></i>Cart 
-                    </button></a>
+                <a href="/users/cartpage/<%= locals.user.id %>">
+                    <button>
+                        <i class="fas fa-shopping-cart"></i>
+                            <span>Cart</span> 
+                    </button>
+                </a>
             </div>
             <div class="user-profile-btn">
                 <a href="/users/profile">
-                    <span>My Account</span>
+                    <span>
+                        <i class="far fa-user user-icon"></i>
+                            <span>Account</span>
+                    </span>
                 </a>
             </div>
             <div class="sign-out-btn">
@@ -24,7 +30,9 @@
             
         <% }else{ %>
             <div class="cart-section">
-                <a href="/users/sign-in"><button ><i class="fas fa-shopping-cart"></i>Cart</button></a>
+                <a href="/users/sign-in"><button ><i class="fas fa-shopping-cart"></i>
+                  <span>Cart</span>  
+                </button></a>
             </div>
             <div class="sign-up-btn">
                 <a href="/users/sign-up"> <button>Sign up</button> </a>

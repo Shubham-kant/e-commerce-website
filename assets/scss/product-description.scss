@@ -1,7 +1,7 @@
 $breakpoints: (
     'xs': 0px,
     'sm': 320px,
-    'md': 600px,
+    'md': 650px,
     'lg': 768px,
     'xl': 1024px,
     'xlg': 1440px
@@ -10,7 +10,7 @@ $breakpoints: (
     display: flex;
     padding: 16px;
     margin-bottom: 50px;
-    // If screen size is 600px wide, or less
+    // If screen size is 650px wide, or less
     @media screen  and (max-width : map-get($breakpoints,'md')) {
         flex-direction: column;
     }
@@ -19,7 +19,7 @@ $breakpoints: (
         display: flex;
         flex-direction: column;
         // justify-content: center;
-        // If screen size is 600px wide, or less
+        // If screen size is 650px wide, or less
         @media screen  and (max-width : map-get($breakpoints,'md')) {
             width: 100%;
         }
@@ -29,6 +29,10 @@ $breakpoints: (
             padding: 16px;
             max-width: 352px;
             max-height: 400px;
+            @media screen  and (max-width : map-get($breakpoints,'md')) {
+                margin: auto;
+                margin-bottom: 10px;
+            }
             img {
                 width: 100%;
                 height: 100%;
@@ -36,6 +40,7 @@ $breakpoints: (
         }
         .cart-btn-section {
             padding-top: 12px;
+            padding-bottom: 16px;
             display: flex;
             justify-content: center;
             a {
@@ -62,7 +67,7 @@ $breakpoints: (
     }
     .product-info-container {
         width: 70%;
-        // If screen size is 600px wide, or less
+        // If screen size is 650px wide, or less
         @media screen  and (max-width : map-get($breakpoints,'md')) {
             width: 100%;
         }
@@ -129,33 +134,41 @@ $breakpoints: (
         .highlight-container {
             display: flex;
             padding-top: 24px;
-            // If screen size is 600px wide, or less
+            // If screen size is 650px wide, or less
             @media screen  and (max-width : map-get($breakpoints,'md')) {
                 flex-direction: column;
             }
             .highlight-heading { //same remove this
                 font-weight: 500;
+                padding-bottom: 8px;
                 font-size: 16px;
                 color: #878787;
                 width: 110px;
                 padding-right: 10px;
             }
-            .highlight {
-                color: #212121;
-                padding: 0 0 8px 16px;
+            ul {
+                // If screen size is 650px wide, or less
+                @media screen  and (max-width : map-get($breakpoints,'md')) {
+                    padding-left: 14px;
+                }
+                .highlight {
+                    color: #212121;
+                    padding: 0 0 8px 16px;
+                }
             }
         }
         .detail-description-container {
             display: flex;
             font-size: 14px;
             margin-top: 24px;
-            // If screen size is 600px wide, or less
+            // If screen size is 650px wide, or less
             @media screen  and (max-width : map-get($breakpoints,'md')) {
                 flex-direction: column;
             }
             .detail-description-heading {
                 font-weight: 500;
                 color: #878787;
+                padding-bottom: 8px;
                 font-size: 16px;
                 width: 110px;
                 padding-right: 24px;
