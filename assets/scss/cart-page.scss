@@ -1,14 +1,30 @@
+$breakpoints: (
+    'xs': 0px,
+    'sm': 380px,
+    'md': 650px,
+    'lg': 768px,
+    'xl': 968px,
+    'xlg': 1440px
+);
 body{
     background-color: #f1f3f6;
     .user-cartpage {
         background-color: #f1f3f6;
         display: flex;
         margin-bottom: 50px;
+        // If screen size is 768px wide, or less
+        @media screen  and (max-width : map-get($breakpoints,'lg')) {
+            flex-direction: column;
+        }
         .cart-container{
             background: #fff;
             margin: 20px 10px;
             box-shadow: #00000033 0px 1px 2px 0px;
             width: 66%;
+            // If screen size is 768px wide, or less
+            @media screen  and (max-width : map-get($breakpoints,'lg')) {
+                width: 96%;
+            }
             .cart-item-container {
                 border-top: 1px solid #f0f0f0;
                 // position: relative;
@@ -20,12 +36,15 @@ body{
                     display:flex;
                     .description-container {
                         display: flex;
-                        .description{
+                        // If screen size is 968px wide, or less
+                        @media screen  and (max-width : map-get($breakpoints,'xl')) {
+                            flex-direction: column;
+                        }
+                        .description {
                             padding: 0 24px 12px;
                             vertical-align: top;
                             min-height: 112px;          
                             height: 120px;
-                            width: 400px;
                             overflow: hidden;
                             max-width: 460px;
                             line-height: 26px;
@@ -40,6 +59,10 @@ body{
                             }
                             .cart-item-price {
                                 padding: 40px 0;
+                                 // If screen size is 968px wide, or less
+                                @media screen  and (max-width : map-get($breakpoints,'xl')) {
+                                    padding: 20px 0;
+                                }
                                 .original-price {
                                     text-decoration: line-through;
                                     color: #878787;
@@ -62,6 +85,11 @@ body{
             
                         }
                         .delivery-details {
+                            // If screen size is 968px wide, or less
+                            @media screen  and (max-width : map-get($breakpoints,'xl')) {
+                                padding-left: 24px;
+                                padding-right: 24px;
+                            }
                             .free-delivery {
                                 font-size: 14px;
                                 color: #388e3c;
@@ -160,6 +188,11 @@ body{
             position: sticky;
             top: 8px;
             bottom: 0;
+            // If screen size is 768px wide, or less
+            @media screen  and (max-width : map-get($breakpoints,'lg')) {
+                width: 96%;
+                position: static;
+            }
             .price-details-heading {
                 font-size: 16px;
                 color: #878787;
