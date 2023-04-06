@@ -1,6 +1,6 @@
 $breakpoints: (
     'xs': 0px,
-    'sm': 320px,
+    'sm': 380px,
     'md': 650px,
     'lg': 768px,
     'xl': 1024px,
@@ -18,12 +18,20 @@ body{
     }
     .header-section{
         display:flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         box-sizing: border-box;
         background-color: #2874F0;
         padding: 8px 6px;
+        // If screen size is 650px wide, or less
+        @media screen  and (max-width : map-get($breakpoints,'md')) {
+            height: 82px;
+        }
         .app-name{
+            // If screen size is 650px wide, or less
+            @media screen  and (max-width : map-get($breakpoints,'md')) {
+                padding-bottom: 32px;
+            }
             a{
                 text-decoration: none;
                 font-family: sans-serif;
@@ -42,6 +50,17 @@ body{
             max-width: 350px;
             padding-left: 4px;
             padding-right: 4px;
+            // If screen size is 650px wide, or less
+            @media screen  and (max-width : map-get($breakpoints,'md')) {
+                position: absolute;
+                top: 44px;
+                // margin-top: 6px;
+            }
+            // If screen size is 320px wide, or less
+            @media screen  and (max-width : map-get($breakpoints,'sm')) {
+                width: 300px;
+                // margin-top: 6px;
+            }
             input {
                 padding: 8px 24px;
                 outline: none;
@@ -52,6 +71,10 @@ body{
             }
         }
         .sign-links {
+            // If screen size is 650px wide, or less
+            @media screen  and (max-width : map-get($breakpoints,'md')) {
+                padding-bottom: 32px;
+            }
             display: flex;
             align-items: center;
             button {
@@ -79,39 +102,92 @@ body{
                 }
             }
             .user-profile-btn{
-                a {
-                    text-decoration: none;
-                    span {
-                        margin-left:10px;
-                        color: white;
-                        span {
-                            // If screen size is 650px wide, or less
-                            @media screen  and (max-width : map-get($breakpoints,'md')) {
-                                display: none;
-                            }
+                .user-account {
+                    color: white;
+                    cursor: pointer;
+                    margin-left:10px;
+                    &:hover {
+                        i {
+                            transform: rotate(0deg) rotate(180deg);
                         }
                     }
                 }
             }
-            .sign-out-btn{
-                button{
-                    background:transparent;
-                    margin-left:10px;
-                    border: none;
+            .dropdown {
+                position: relative;
+                display: inline-block;
+              }
+              .caret-down {
+                display: none;
+                position: absolute;
+                left: 50%;
+                color: black ;
+              }
+              .dropdown-content {
+                display: none;
+                position: absolute;
+                border-radius: 4px;
+                background-color: #fff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                overflow: auto;
+                z-index: 1;
+                top: 32px; //positioning of dropdown
+                left: -20px;
+                // i {
+                //     position: absolute;
+                //     left: 50%;
+                //     color: black ;
+                // }
+                .dropdown-item {
+                    border-bottom: 1px solid #f0f0f0;
+                    font-size: 14px;
+                    line-height: 18px;
+                    padding: 12px;
+                    font-weight: 400;
+                    a {
+                        color: black;
+                        text-decoration: none;
+                    }
                 }
-            }
-            .sign-up-btn{
-                button{
-                    background-color:transparent;
-                    border: none;
-                    margin-left:10px;  
-                }
-            }
-            .sign-in-btn{
-                button{
-                    background:transparent;
-                    border: none;
-                    margin-left:10px;
+              }
+              
+              .dropdown:hover .dropdown-content {
+                display: block;
+              }
+            // .sign-out-btn{
+            //     button{
+            //         background:transparent;
+            //         margin-left:10px;
+            //         border: none;
+            //     }
+            // }
+            // .sign-up-btn{
+            //     button{
+            //         background-color:transparent;
+            //         border: none;
+            //         margin-left:10px;  
+            //     }
+            // }
+            // .sign-in-btn{
+            //     button{
+            //         background:transparent;
+            //         border: none;
+            //         margin-left:10px;
+            //     }
+            // }
+            .sign-in-btn {
+                padding-left: 8px;
+                a {
+                    color: #2874f0;
+                    font-weight: 500;
+                    background-color: #fff;
+                    cursor: pointer;
+                    border-radius: 2px;
+                    height: 32px;
+                    padding: 5px 34px;
+                    border: 1px solid #dbdbdb;
+                    text-decoration: none;
                 }
             }
         }

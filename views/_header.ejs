@@ -16,17 +16,24 @@
                     </button>
                 </a>
             </div>
-            <div class="user-profile-btn">
-                <a href="/users/profile">
-                    <span>
-                        <i class="far fa-user user-icon"></i>
-                            <span>Account</span>
-                    </span>
-                </a>
+            <div class="user-profile-btn dropdown">
+                <div class="user-account dropbtn">
+                    <span>My Account</span>
+                    <i class="fas fa-angle-down"></i>
+                    <i class="fas fa-caret-down caret-down"></i>
+                    <div class="dropdown-content">
+                        <p class="dropdown-item">
+                            <a href="/users/profile">My Profile</a>
+                        </p>
+                        <p class="dropdown-item">
+                            <a href="/users/sign-out">Sign out</a>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="sign-out-btn">
+            <!-- <div class="sign-out-btn">
                 <a href="/users/sign-out"><button>Signout</button></a>
-            </div>
+            </div> -->
             
         <% }else{ %>
             <div class="cart-section">
@@ -34,11 +41,14 @@
                   <span>Cart</span>  
                 </button></a>
             </div>
-            <div class="sign-up-btn">
+            <!-- <div class="sign-up-btn">
                 <a href="/users/sign-up"> <button>Sign up</button> </a>
             </div>
             <div class="sign-in-btn">
                 <a href="/users/sign-in"><button>Sign in</button></a>
+            </div> -->
+            <div class="sign-in-btn">
+                <a href="/users/sign-in">Sign In</a>
             </div>
 
         <% } %>
