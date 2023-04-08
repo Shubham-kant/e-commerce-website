@@ -6,16 +6,18 @@
         <% if(i.item){ %>
             <div class="cart-item-container">
                 <div class="cart-item">
-                    <img src="<%= i.item.avatar %>" alt="<%= i.name %>" width="112" height="112">
+                    <div class="image-section">
+                        <img src="<%= i.item.avatar %>" alt="<%= i.name %>">
+                    </div>
                     <div class="description-container">
                         <div class="description">
                             <div class="product-name">
                                 <span><%= i.item.name %></span>
-                                <% if(i.item.name.length + i.item.description.length > 43){ %>
-                                    <span>(<%= i.item.description.substring(0,15) + "..." %></span>
-                                <% }else{ %>
-                                    <span>(<%= i.item.description %>)</span>
-                                <% } %>
+                                    <% if(i.item.name.length + i.item.description.length > 43){ %>
+                                        <span>(<%= i.item.description.substring(0,15) + "..." %></span>
+                                    <% }else{ %>
+                                        <span>(<%= i.item.description %>)</span>
+                                    <% } %>
                                 </div>
                             <p class="seller-info">Seller:<%= i.item.manufacturer %></p>
                             <p class="cart-item-price">
