@@ -34,6 +34,19 @@ body{
                 .cart-item{
                     padding: 10px 12px;
                     display:flex;
+                    .image-section {
+                        height: 112px;
+                        width: 112px;
+                        // If screen size is 380px wide, or less
+                        @media screen  and (max-width : map-get($breakpoints,'sm')) {
+                            width: 100px;
+                            height: 100px;
+                        }
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
                     .description-container {
                         display: flex;
                         // If screen size is 968px wide, or less
@@ -50,18 +63,33 @@ body{
                             line-height: 26px;
                             .product-name {
                                 cursor: pointer;
+                                line-height: 18px;
+                                font-size: 16px;
+                                 // If screen size is 380px wide, or less
+                                 @media screen  and (max-width : map-get($breakpoints,'sm')) {
+                                    font-size: 14px;
+                                }
                             }
                             .seller-info {
                                 display: block;
                                 color: #878787;
                                 font-size: 14px;
                                 height: 20px;
+                                // If screen size is 380px wide, or less
+                                @media screen  and (max-width : map-get($breakpoints,'sm')) {
+                                    height: 18px;
+                                }
                             }
                             .cart-item-price {
                                 padding: 40px 0;
                                  // If screen size is 968px wide, or less
                                 @media screen  and (max-width : map-get($breakpoints,'xl')) {
                                     padding: 20px 0;
+                                    line-height: 18px;
+                                }
+                                 // If screen size is 380px wide, or less
+                                 @media screen  and (max-width : map-get($breakpoints,'sm')) {
+                                    padding: 2px 0;
                                 }
                                 .original-price {
                                     text-decoration: line-through;
@@ -81,10 +109,11 @@ body{
                                 }
                             }
                         }
-                        img{
-            
+                        img {
+                          
                         }
                         .delivery-details {
+                            font-size: 14px;
                             // If screen size is 968px wide, or less
                             @media screen  and (max-width : map-get($breakpoints,'xl')) {
                                 padding-left: 24px;
