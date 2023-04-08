@@ -3,8 +3,12 @@ body .sign-up-page {
   justify-content: center;
   padding: 20px;
   margin: 40px;
-  height: 400px;
-  min-width: 650px; }
+  height: 400px; }
+  @media screen and (max-width: 650px) {
+    body .sign-up-page {
+      flex-direction: column;
+      padding: 2px;
+      margin: 2px; } }
   body .sign-up-page .sign-up-heading-container {
     background-color: #2874F0;
     max-width: 214px;
@@ -13,6 +17,9 @@ body .sign-up-page {
     background-image: url("../images/yourkart-logo.jpg");
     background-position: center 180px;
     background-repeat: no-repeat; }
+    @media screen and (max-width: 650px) {
+      body .sign-up-page .sign-up-heading-container {
+        display: none; } }
     body .sign-up-page .sign-up-heading-container .sign-up-heading {
       font-family: arial;
       padding-left: 10px;
@@ -25,10 +32,13 @@ body .sign-up-page {
       z-index: 2; }
   body .sign-up-page .sign-up-form-container {
     padding: 4px 32px; }
+    @media screen and (max-width: 650px) {
+      body .sign-up-page .sign-up-form-container {
+        margin: auto; } }
     body .sign-up-page .sign-up-form-container form {
+      display: flex;
+      flex-direction: column;
       background-color: white;
-      height: 26rem;
-      width: 18rem;
       border-radius: 3%;
       margin: auto; }
       body .sign-up-page .sign-up-form-container form input {
