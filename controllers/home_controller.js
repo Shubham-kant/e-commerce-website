@@ -13,7 +13,7 @@ module.exports.home=function(req,res){
         });
     });
 }
-module.exports.productDescription=function(req,res){
+module.exports.productDescription = function(req,res){
     var productId = req.params.id;
     let productInCart = false;
     console.log(productId,'product id');

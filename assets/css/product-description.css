@@ -130,4 +130,5 @@
         width: 110px;
         padding-right: 24px; }
       .product-description-container .product-info-container .detail-description-container .detail-description {
-        font-size: 16px; }
+        font-size: 16px;
+        line-height: 20px; }
