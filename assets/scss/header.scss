@@ -110,7 +110,8 @@ body{
                     }
                 }
             }
-            .user-profile-btn{
+            .user-profile-btn {
+                padding: 8px 0;
                 .user-account {
                     color: white;
                     cursor: pointer;
@@ -157,12 +158,20 @@ body{
                     a {
                         color: black;
                         text-decoration: none;
+                    } 
+                    &:hover {
+                        background-color: #fafafa;
                     }
+                }
+                &:hover .dropdown{
+                    display: block;
+                    transition: 5s;
                 }
               }
               
               .dropdown:hover .dropdown-content {
                 display: block;
+                transition: 5s;
               }
             // .sign-out-btn{
             //     button{

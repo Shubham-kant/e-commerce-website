@@ -70,7 +70,11 @@ module.exports.createSession=function(req,res){
 }
 //profile section
 module.exports.profile=function(req,res){
-    return res.render('user_profile');
+    console.log(req.body);
+    console.log(res.locals);
+    return res.render('user_profile', {
+        user:res.locals.user
+    });
 }
 //sign out
 module.exports.destroySession=function(req,res){

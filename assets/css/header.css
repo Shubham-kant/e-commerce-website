@@ -79,12 +79,14 @@ body .header-section {
       @media screen and (max-width: 650px) {
         body .header-section .sign-links .cart-section button span {
           display: none; } }
-    body .header-section .sign-links .user-profile-btn .user-account {
-      color: white;
-      cursor: pointer;
-      margin-left: 10px; }
-      body .header-section .sign-links .user-profile-btn .user-account:hover i {
-        transform: rotate(0deg) rotate(180deg); }
+    body .header-section .sign-links .user-profile-btn {
+      padding: 8px 0; }
+      body .header-section .sign-links .user-profile-btn .user-account {
+        color: white;
+        cursor: pointer;
+        margin-left: 10px; }
+        body .header-section .sign-links .user-profile-btn .user-account:hover i {
+          transform: rotate(0deg) rotate(180deg); }
     body .header-section .sign-links .dropdown {
       position: relative;
       display: inline-block; }
@@ -113,8 +115,14 @@ body .header-section {
         body .header-section .sign-links .dropdown-content .dropdown-item a {
           color: black;
           text-decoration: none; }
+        body .header-section .sign-links .dropdown-content .dropdown-item:hover {
+          background-color: #fafafa; }
+      body .header-section .sign-links .dropdown-content:hover .dropdown {
+        display: block;
+        transition: 5s; }
     body .header-section .sign-links .dropdown:hover .dropdown-content {
-      display: block; }
+      display: block;
+      transition: 5s; }
     body .header-section .sign-links .sign-in-btn {
       padding-left: 8px; }
       body .header-section .sign-links .sign-in-btn a {
