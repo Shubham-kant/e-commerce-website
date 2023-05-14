@@ -4,14 +4,30 @@
     font-family:Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
+$breakpoints: (
+    'xs': 0px,
+    'sm': 380px,
+    'md': 650px,
+    'lg': 768px,
+    'xl': 968px,
+    'xlg': 1440px
+);
 body {
     background-color: #f1f3f6;
     .profile-container {
         background-color: #f1f3f6;
         padding: 14px 64px;
+        // If screen size is 650px wide, or less
+        @media screen  and (max-width : map-get($breakpoints,'md')) {
+            padding: 14px;
+        }
         .personal-info-container {
             background-color: #fff;
             padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             .personal-info-header {
                 display: flex;
                 padding-bottom: 24px;
@@ -20,46 +36,55 @@ body {
                     font-weight: 500;
                     padding-right: 24px;
                 }
+                .change-info {
+                    color: #2874F0;;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
             } 
-            .fullname-container {
-                display: flex;
-                flex-direction: column;
-                label {
-                    padding-bottom: 16px;
+            .profile-update-form {
+                .fullname-container {
+                    display: flex;
+                    flex-direction: column;
+                    label {
+                        padding-bottom: 16px;
+                    }
+                    input {
+                        width: 270px;     
+                        height: 50px;
+                        font-size: 16px;
+                        padding-left: 4px;
+                    }
                 }
-                input {
-                    width: 270px;     
-                    height: 50px;
-                    font-size: 16px;
-                    padding-left: 4px;
+                .email-mobile-container {
+                    display: flex;
+                    flex-direction: column;
+                    label {
+                        padding-bottom: 16px;
+                        padding-top: 32px;
+                    }
+                    input {
+                        width: 270px;     
+                        height: 50px;
+                        font-size: 16px;
+                        padding-left: 4px;
+                    }
                 }
-            }
-            .email-mobile-container {
-                display: flex;
-                flex-direction: column;
-                label {
-                    padding-bottom: 16px;
-                    padding-top: 32px;
+                .profile-update-btn {
+                    background: #2874f0;
+                    cursor: pointer;
+                    width: 130px;
+                    height: 48px;
+                    padding: 14px;
+                    color: #fff;
+                    border-radius: 3px;
+                    font-size: 18px;
+                    font-weight: 500;
+                    box-shadow: none;
+                    border: none;
+                    margin-top: 24px;
                 }
-                input {
-                    width: 270px;     
-                    height: 50px;
-                    font-size: 16px;
-                    padding-left: 4px;
-                }
-            }
-            .profile-update-btn {
-                background: #2874f0;
-                width: 130px;
-                height: 48px;
-                padding: 14px;
-                color: #fff;
-                border-radius: 3px;
-                font-size: 18px;
-                font-weight: 500;
-                box-shadow: none;
-                border: none;
-                margin-top: 24px;
             }
         }
     }

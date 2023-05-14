@@ -1,4 +1,5 @@
-const User=require('../models/user');
+const User = require('../models/user');
+const { userProfile } = require('../assets/js/user_profile');
 
 //go to sign up page
 module.exports.signUp=function(req,res){
@@ -69,12 +70,25 @@ module.exports.createSession=function(req,res){
 
 }
 //profile section
-module.exports.profile=function(req,res){
-    console.log(req.body);
-    console.log(res.locals);
+module.exports.profile = function(req,res){
     return res.render('user_profile', {
-        user:res.locals.user
+        user:res.locals.user,
     });
+}
+
+module.exports.updateUserDetails = async function(req,res) {
+    if (req.params.id === req.user._id.toString()) {
+        try {
+            let user = await User.findById(req.params.id);
+            user.name = req.body.name;
+            user.email = req.body.email;
+            // localStorage.setItem(`user-`+ req.params.id +`-mobile`, req.body?.mobile);
+            user.save();
+            return res.redirect('back');
+        } catch (error) {
+            return res.redirect(back);
+        }
+    }
 }
 //sign out
 module.exports.destroySession=function(req,res){
@@ -82,6 +96,4 @@ module.exports.destroySession=function(req,res){
     req.logout();
     //return to homepage
     return res.redirect('/');
-
-
 }
