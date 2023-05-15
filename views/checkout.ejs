@@ -1,27 +1,50 @@
 <link rel="stylesheet" href="/css/checkout.css">
-<section id="checkout-page">
-    <h2>CHECKOUT</h2>
-    <h4>Your Total:<%= totalPrice %></h4>
-    <form action="/api/users/buy/<%= locals.user.id %>" method="POST">
-        <div>
-            <label>
-                Mobile:
-            </label>
-            <input type="number" name="mobile" required>
-        </div>
-        <div>
-            <label>
-                Address:
-            </label>
-            <input type="text" name="address" required>
-        </div>
-        
-        
-        <!-- Card Holder Name:<input type="text" name="cardholdername" required>
-        Credit Card Number:<input type="number" name="cardnumber" required>
-        Expiration Month:<input type="number" name="expmon" required>
-        Expiration year:<input type="number" name="expyr" required>
-        CVC:<input type="number" name="cvc"> -->
-        <input type="submit" value="BUY">
-    </form>
-</section>
+<div class="checkout-page-container">
+    <div class="delivery-address-container">
+        <h1>delivery address</h1>
+        <form action="">
+            <div class="personal-info-section address-form-options">
+                <label for="name"></label>
+                <input type="text" name="name" id="name" value="<%= user.name %>" placeholder="Name">
+                <label for="mobile"></label>
+                <input type="tel" name="mobile" id="mobile" value="" placeholder="10-digit mobile number">
+            </div>
+            <div class="address-form-options">
+                <label for="pincode"></label>
+                <input type="text" name="pincode" id="pincode" value="" placeholder="Pincode">
+                <label for="locality"></label>
+                <input type="text" name="locality" id="locality" value="" placeholder="Locality">
+            </div>
+            <div class="area-steet-container address-form-options">
+                <label for="area"></label>
+                <input type="text" name="area" id="area" value="" placeholder="Address(Area and street)">
+            </div>
+            <div class="city-state-section address-form-options">
+                <label for="city"></label>
+                <input type="text" name="city" id="city" value="" placeholder="city/District/Town">
+                <label for="state"></label>
+                <input type="text" name="state" id="state" value="" placeholder="State">
+            </div>
+            <div class="delivery-address-type-container">
+                <h2 class="address-type-heading">Address type</h2>
+                <div class="delivery-address-options">
+                    <div class="delivery-address-option">
+                        <input type="radio" id="home" name="address_type" value="home">
+                        <label for="home">Home (All day delivery)</label>
+                    </div>
+                    <div class="delivery-address-option">
+                        <input type="radio" id="work" name="address_type" value="work">
+                        <label for="work">Work (Delivery between 10AM-5PM)</label>
+                    </div>
+                </div>
+            </div>
+            <div class="delivery-success-btn">
+                <a href="">
+                    <input type="submit" value="Save and Deliver Here">
+                </a>
+            </div>
+        </form>
+    </div>
+    
+
+</div>

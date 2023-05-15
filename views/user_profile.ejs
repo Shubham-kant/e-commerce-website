@@ -1,5 +1,22 @@
-<link rel="stylesheet" href="/css/user_profile.css">
-<h1>
-    <%= user.name %>
-    <%= user.email %>
-</h1>
+<link rel="stylesheet" href="/css/user-profile.css">
+<% let editingMode = false; %>
+<div class="profile-container">
+    <div class="personal-info-container">
+        <div class="personal-info-header">
+            <h1 class="personal-info-heading">Personal Information</h1>
+        </div>
+        <form class="profile-update-form" action="/users/update/<%= user._id %>" method="POST">
+            <div class="fullname-container">
+                <label for="">Name</label>
+                <input type="text" name="name" id="" value="<%= user.name %>" placeholder="Full name`">
+            </div>
+            <div class="email-mobile-container">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" value="<%= user.email %>" placeholder="email">
+                <!-- <label for="mobile">Mobile Number</label>
+                <input type="tel" name="mobile" id="mobile" value="<%= user.mobile %>" placeholder="mobile"> -->
+            </div>
+            <input type="submit" name="save" value="Save" class="profile-update-btn">
+        </form>
+    </div>
+</div>
