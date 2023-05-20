@@ -47,7 +47,6 @@ module.exports.cartPage=function(req,res){
     console.log(req.session.cart);
     var cart = new Cart(req.session.cart);
     let deliveryDetails = getDeliveryDetails();
-    console.log(deliveryDetails);
     return res.render('cart-page',{
         products:cart.generateArray(),
         deliveryDetails: deliveryDetails,
@@ -116,7 +115,6 @@ module.exports.removeProduct=function(req,res){
             })
         }
         return res.redirect('back');
-        // return res.render();
     })
 }
 

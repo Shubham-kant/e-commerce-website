@@ -4,13 +4,13 @@
         <% for(var i of products){  %>
             <div class="product-box">
                 <a href="/products/<%= i._id %>">
-                    <img src="<%= i.avatar %>" alt="<%= i.name %>" width="150" height="200">
-                    <span><%= i.name %></span><br>
-                    <span>₹ <%= i.price %></span>
+                    <div class="product-box-clickable">
+                        <img src="<%= i.avatar %>" alt="<%= i.name %>">
+                        <span class="product-name"><%= i.name %></span>
+                        <span class="product-price">₹ <%= i.price %></span>
+                    </div>
                 </a>
-                
-                
-                <% if(locals.user){ %>
+                <!-- <% if(locals.user){ %>
                     <span class="cart-symbol"><a href="/users/cart/<%= i._id %>">
                     
                         <button><i class="fas fa-shopping-cart"></i>Add to Cart</button>
@@ -21,12 +21,8 @@
                     <span class="cart-symbol"><a href="/users/sign-in">
                         <button>Add to Cart<i class="fas fa-shopping-cart"></i></button>
                     </a></span>
-                <% } %>
-                <!-- <%= i.description %> -->
-                <!-- <%= i.type %> -->
-                <!-- <%= i.subtype %> -->
-                <!-- <%= i.manufacturer %> -->
-                <!-- <%= i.stock %> -->
+                <% } %> -->
+
             </div>
         <% } %>
     </div>

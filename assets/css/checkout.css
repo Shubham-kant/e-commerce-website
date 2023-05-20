@@ -13,6 +13,7 @@ body {
       body .checkout-page-container {
         padding: 14px; } }
     body .checkout-page-container .delivery-address-container {
+      margin-bottom: 40px;
       background-color: #f5faff; }
       body .checkout-page-container .delivery-address-container h1 {
         color: #fff;

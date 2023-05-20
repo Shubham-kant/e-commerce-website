@@ -1,6 +1,7 @@
 const express=require('express');
 const cookieParser=require('cookie-parser');
 const app=express();
+require('dotenv').config();
 const port=process.env.PORT || 8000;
 const sassMiddleware=require('node-sass-middleware');
 app.use(sassMiddleware({

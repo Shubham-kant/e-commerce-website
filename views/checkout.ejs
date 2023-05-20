@@ -2,7 +2,7 @@
 <div class="checkout-page-container">
     <div class="delivery-address-container">
         <h1>delivery address</h1>
-        <form action="">
+        <form action="/api/users/buy/<%= locals.user.id %>" method="POST">
             <div class="personal-info-section address-form-options">
                 <label for="name"></label>
                 <input type="text" name="name" id="name" value="<%= user.name %>" placeholder="Name">

@@ -21,5 +21,7 @@ router.get('/cart/removeproduct/:id',passport.checkAuthentication,cartController
 router.get('/cartpage/:id',passport.checkAuthentication,cartController.cartPage);
 router.get('/cartpage/:id/checkout',passport.checkAuthentication,cartController.checkout);
 
+router.post('/update/:id',passport.checkAuthentication,userController.updateUserDetails);
+
 console.log('user router is working fine');
 module.exports=router;

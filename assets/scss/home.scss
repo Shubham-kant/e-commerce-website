@@ -1,64 +1,64 @@
-$breakpoints: (
-    'xs': 0px,
-    'sm': 320px,
-    'md': 425px,
-    'lg': 768px,
-    'xl': 1024px,
-    'xlg': 1440px
-);
-/* css reset */
 *{
     margin:0;
     padding:0;
     font-family:Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
+$breakpoints: (
+    'xs': 0px,
+    'sm': 380px,
+    'md': 650px,
+    'lg': 768px,
+    'xl': 968px,
+    'xlg': 1440px
+);
 body{
+    background-color: #f1f3f6;
     .home-page-container{
-        margin-left:20px;
-        margin-right:20px;
-        margin-bottom: 60px;
+        background-color: #f1f3f6;
+        padding: 14px;
         .product-container{
-            display:flex;
-            justify-content:space-around;
-            flex-wrap:wrap;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            background-color: #f5faff;
             .product-box{
-                height:15rem;
-                width:10rem;
-                display:inline-block;
-                margin-left:2rem;
-                margin-bottom:4rem;
-                img{
-                    display:inline-block;
-                }
-                span {
-                    color: black;
-                }
-                button{
-                    background-color: #FF9F00;
-                    height:2.2rem;
-                    // background-color: palevioletred;
+                margin:0px 2px;
+                min-width: 232px;
+                a {
+                    text-decoration: none;
+                    padding: 25px 15px;
                     display: inline-block;
-                    margin-top: 0.5rem;
-                        // border-radius:3%;
-                    width: 10rem;
-                    padding: 6px;
-                    color:white;
-                    font-size:1rem;
-                    outline: none;
-                    cursor: pointer;
-                    border:none;
-                    font-family:sans-serif;
-                }
-                span{
-                    display:inline-block;
-                    margin:auto;
-                    button {
-                        i {
-                            padding-right: 8px;
+                    vertical-align: top;
+                    width: 100%;
+                    max-height: 366px;
+                    text-align: center;
+                    .product-box-clickable {
+                        display: flex;
+                        flex-direction: column;
+                        img {
+                            height: 200px;
+                            width: 150px;
+                            &:hover {
+                                transform: scale(1.04);
+                            }
+                        }
+                        .product-name {
+                            font-size: 14px;
+                            font-weight: 500;
+                            margin-top: 15px;
+                            color: black;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        .product-price {
+                            font-size: 16px;
+                            color: #388e3c;
+                            padding-top: 8px;
                         }
                     }
-                }
+                }    
             }
         }
     }
