@@ -1,2 +1,4 @@
 .env
+dev-build
+prod-build
 node_modules/

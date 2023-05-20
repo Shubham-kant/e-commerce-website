@@ -3,12 +3,12 @@ const cookieParser=require('cookie-parser');
 const app=express();
 require('dotenv').config();
 const port=process.env.PORT || 8000;
-const sassMiddleware=require('node-sass-middleware');
+const sassMiddleware = require('node-sass-middleware');
 app.use(sassMiddleware({
     src:'./assets/scss',
     dest:'./assets/css',
     debug:false,
-    outputStyle:'extended',
+    outputStyle:'compressed',
     prefix:'/css'
 }));
 
@@ -65,7 +65,4 @@ app.listen(port,function(err){
         console.log(`error is :${err}`);
     }
     console.log(`port is running on:${port}`);
-
-
-
 })
