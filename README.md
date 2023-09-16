@@ -5,12 +5,25 @@ In this website,users can login with their accounts,explore all the wonderful pr
 
 ## Screenshots
 
+### Sign up page
 ![Sign Up Page](uploads/yourkart_screenshots/sign_up_page.PNG "Sign Up Page")
+
+### Product description
 ![Home Page](uploads/yourkart_screenshots/product_description.PNG "Product description")
+
+### Product description - mobile view
 ![Home Page](uploads/yourkart_screenshots/product_description_mobile.PNG "Product description - mobile view")
+
+### Cart page
 ![Cart Page](uploads/yourkart_screenshots/cartpage.PNG "Cart page")
+
+### Cart page - mobile view
 ![Cart Page](uploads/yourkart_screenshots/cartpage_mobile.PNG  "Cart page - mobile view")
+
+### Address page
 ![Cart Page](uploads/yourkart_screenshots/delivery_address_page.PNG  "Address page ")
+
+### Address page - mobile view
 ![Cart Page](uploads/yourkart_screenshots/delivery_address_page_mobile.PNG  "Address page - mobile view")
 
 ## Technologies Stack:
