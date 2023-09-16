@@ -1,5 +1,6 @@
 const express=require('express');
 const router=express.Router();
+const {v4 : uuidv4} = require('uuid');
 const multer=require('multer');
 const path=require('path');
 const AVATAR_PATH=path.join('/uploads/products/avatars');
@@ -11,14 +12,14 @@ let storage=multer.diskStorage({
         cb(null,path.join(__dirname,"..",AVATAR_PATH));
     },
     filename:function(req,file,cb){
-        cb(null,file.fieldname+'-'+Date.now());
+        // console.log('req',req);
+        cb(null,file.fieldname+'-'+req.params.unique_id);
 
     }
 });
 var upload=multer({ storage: storage });
 
-
 router.get('/product-insertion-page',vendorController.productAdd);
-router.post('/product-insertion-page/create',upload.single("avatar"),vendorController.create);
+router.post('/product-insertion-page/create/:unique_id',upload.single("avatar"),vendorController.create);
 
 module.exports=router;

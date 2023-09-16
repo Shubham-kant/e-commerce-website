@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/css/vendor-product-add.css">
 <section class="product-add">
     <h1>Add Product</h1>
-    <form action="/vendor/product-insertion-page/create" enctype="multipart/form-data" method="POST">
+    <form action="/vendor/product-insertion-page/create/<%= unique_id %>" enctype="multipart/form-data" method="POST">
         <div>
             <label for="productid">Product-id:</label>
         <input type="number" name="productid" id="productid" required>

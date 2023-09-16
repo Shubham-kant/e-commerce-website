@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f3f6;
+}
+
+body .checkout-page-container {
+  background-color: #f1f3f6;
+  padding: 14px 64px;
+}
+
+@media screen and (max-width: 650px) {
+  body .checkout-page-container {
+    padding: 14px;
+  }
+}
+
+body .checkout-page-container .delivery-address-container {
+  margin-bottom: 40px;
+  background-color: #f5faff;
+}
+
+body .checkout-page-container .delivery-address-container h1 {
+  color: #fff;
+  background-color: #2874f0;
+  height: 48px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 24px;
+  border-radius: 2px 2px 0 0;
+}
+
+body .checkout-page-container .delivery-address-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .checkout-page-container .delivery-address-container form .address-form-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 650px) {
+  body .checkout-page-container .delivery-address-container form .address-form-options {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+body .checkout-page-container .delivery-address-container form .address-form-options label {
+  padding-bottom: 16px;
+  padding-right: 12px;
+}
+
+body .checkout-page-container .delivery-address-container form .address-form-options input {
+  width: 260px;
+  height: 50px;
+  font-size: 16px;
+  padding-left: 8px;
+  border-radius: 2px;
+  border: 1px solid #e0e0e0;
+}
+
+body .checkout-page-container .delivery-address-container form .delivery-address-type-container {
+  padding: 12px;
+  margin-left: 12px;
+}
+
+body .checkout-page-container .delivery-address-container form .delivery-address-type-container .address-type-heading {
+  font-size: 12px;
+  color: #878787;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 650px) {
+  body .checkout-page-container .delivery-address-container form .delivery-address-type-container .address-type-heading {
+    text-align: center;
+  }
+}
+
+body .checkout-page-container .delivery-address-container form .delivery-address-type-container .delivery-address-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 650px) {
+  body .checkout-page-container .delivery-address-container form .delivery-address-type-container .delivery-address-options {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+body .checkout-page-container .delivery-address-container form .delivery-address-type-container .delivery-address-options .delivery-address-option label {
+  margin-right: 32px;
+}
+
+body .checkout-page-container .delivery-address-container form .delivery-success-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 16px;
+  border-top: 1px solid #f0f0f0;
+  background: #fff;
+  -webkit-box-shadow: 0 -2px 10px 0 #0000001a;
+          box-shadow: 0 -2px 10px 0 #0000001a;
+}
+
+body .checkout-page-container .delivery-address-container form .delivery-success-btn a input[type="submit"] {
+  padding: 16px 30px;
+  min-width: 250px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #fb641b;
+  display: inline-block;
+  font-family: sans-serif;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+/*# sourceMappingURL=checkout.css.map */

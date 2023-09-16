@@ -2,7 +2,7 @@
 <div class="product-description-container">
     <div class="product-image-container">
         <div class="image-section">
-            <img src="<%= product.avatar %>" alt="<%= product.name %>">
+            <img src="/uploads/products/avatars/avatar-<%=product.unique_id %>" alt="<%= product.name %>">
         </div>
         <% if(locals.user){ %>
             <div class="cart-btn-section">

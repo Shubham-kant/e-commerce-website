@@ -1,6 +1,7 @@
 const Product=require('../models/product');
 const Cart=require('../models/cart');
-
+// const AWS = require("aws-sdk");
+// const s3 = new AWS.S3();
 module.exports.home=function(req,res){
     Product.find({},function(err,products){
         if(err){
@@ -13,11 +14,11 @@ module.exports.home=function(req,res){
         });
     });
 }
-module.exports.productDescription = function(req,res){
+module.exports.productDescription = async function(req,res){
     var productId = req.params.id;
     let productInCart = false;
     console.log(productId,'product id');
-    Product.findById(productId,function(err,product){
+    Product.findById(productId,async function(err,product){
         if(err){
             console.log('error in loading the project');
             return;
@@ -39,6 +40,7 @@ module.exports.productDescription = function(req,res){
             console.log(productInCart);
         }
         if(product){
+            //product.avatarS3 = await getAvatar(req,res,product);
             return res.render('product_description',{
                 product:product,
                 productHighlights : productHighlights,
@@ -51,3 +53,31 @@ module.exports.productDescription = function(req,res){
         }
     });
 }
+
+// async function getAvatar(req,res,product) {
+//     console.log('req.path::',req.path);
+//     let filename = req.path.slice(1);
+//     // let filename = 
+//     console.log('filename in get::',filename);
+
+//   try {
+//     let s3File = await s3.getObject({
+//       Bucket: 'cyclic-pear-better-narwhal-ap-northeast-1',
+//       Key: filename,
+//     }).promise()
+
+//     res.set('Content-type', s3File.ContentType);
+//     console.log(s3File.Body.toString());
+//     res.send(s3File.Body.toString()).end();
+//     return s3File.Body.toString();
+//   } catch (error) {
+//     if (error.code === 'NoSuchKey') {
+//       console.log(`No such key ${filename}`)
+//       res.sendStatus(404).end();
+//     } else {
+//       console.log(error);
+//       res.sendStatus(500).end();
+//     }
+//   }
+// }
+
