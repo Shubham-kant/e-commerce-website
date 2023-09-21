@@ -1,8 +1,17 @@
 # YourKart - An E-Commerce website
 
-## Description
-In this website,users can login with their accounts,explore all the wonderful products,then choose the products they want to buy, add them to their cart and buy them.
+### LIVE URL
+[yourkart.cyclic.app](https://yourkart.cyclic.app)
 
+## Description
+* It is an e-commerce website where users can buy products online.
+* Users can make their own account through signup.
+* used passport-local strategy for authentication.
+* used passport-jwt strategy for authorization.
+* Users can add products to cart.
+* Frontend using HTML ,CSS, Sass and JavaScript.
+* Backend is in Node.js and Database is in MongoDB.
+* Used Express.js as a Node.js framework.
 ## Screenshots
 
 ### Sign up page
@@ -35,7 +44,7 @@ In this website,users can login with their accounts,explore all the wonderful pr
 ## How to Install
 
 * Clone the project onto your local machine.
-* Then cd codeial
+* Then cd e-commerce-website
 * npm install
 * npm start
 * Visit your app at http://localhost:8000.
