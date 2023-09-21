@@ -40,7 +40,6 @@ module.exports.productDescription = async function(req,res){
             console.log(productInCart);
         }
         if(product){
-            //product.avatarS3 = await getAvatar(req,res,product);
             return res.render('product_description',{
                 product:product,
                 productHighlights : productHighlights,
