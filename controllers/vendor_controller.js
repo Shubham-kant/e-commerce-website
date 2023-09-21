@@ -45,7 +45,7 @@ module.exports.create=async function(req,res){
         detaildescription:req.body.detaildescription,
         highlights:req.body.highlights,
         stock:req.body.stock,
-        avatar:AVATAR_PATH+'/'+req.file.filename
+        avatar:req.body.avatar
        // avatar:Product.avatarPath+'/'+req.file.fieldname
 
     },function(err,product){

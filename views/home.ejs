@@ -5,7 +5,7 @@
             <div class="product-box">
                 <a href="/products/<%= i._id %>">
                     <div class="product-box-clickable">
-                        <img src="/uploads/products/avatars/avatar-<%=i.unique_id %>" alt="<%= i.name %>">
+                        <img src="<%=i.avatar %>" alt="<%= i.name %>">
                         <span class="product-name"><%= i.name %></span>
                         <span class="product-price">₹ <%= i.price %></span>
                     </div>
